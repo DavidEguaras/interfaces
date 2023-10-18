@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+html{
+    background-color: black;
+}
+body{
+    background-color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    background-color: black;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    height: 75px;
+    width: 75px;
+    background-color: rgb(255, 255, 255);
+}
+
+.navegacionPrincipal{
+    flex-grow: 1;
+    background-color: rgb(67, 168, 176);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacionPrincipal ul{
+    list-style: none;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.navegacionPrincipal ul li{
+    display: inline;
+    margin: 10%;
+    position: relative;
+}
+
+.navegacionPrincipal ul li ul{
+    display: none;
+    position: absolute;
+    top:100%;
+    left:0%;
+    background-color: black;
+    padding: 10px;
+    border: 1px solid aqua;
+}
+
+.navegacionPrincipal ul li ul li{
+    line-height: 2;
+}
+
+.navegacionPrincipal ul li:hover > ul{
+    display: block;
+}
+
+.menuUsuario{
+    min-width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menuUsuario ul{
+    list-style: none;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.menuUsuario ul li{
+    display: inline;
+    margin: 10%;
+}
+</style>
+
+
+
+<body>
+    <header>
+
+        <figure>
+            <img src="" alt="">
+        </figure>
+
+        <nav class="navegacionPrincipal">
+            <ul>
+                <li><a href="#">Opcion1</a>
+                    <ul class="subMenu1">
+                        <li><a href="#">Subopcion1</a></li>
+                        <li><a href="#">Subopcion2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Opcion2</a></li>
+                <li><a href="#">Opcion3</a></li>
+            </ul>
+        </nav>
+
+        <div class="menuUsuario">
+            <ul>
+                <li><a href="#">Ususario</a></li>
+                <li><a href="#">registro</a></li>
+            </ul>
+        </div>
+        
+
+    </header>
+    
+</body>
+
+</html>

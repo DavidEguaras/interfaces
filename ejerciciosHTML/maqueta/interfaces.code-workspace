@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../../Downloads/indexPersonal"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "indexPersonal"
+	}
+}
