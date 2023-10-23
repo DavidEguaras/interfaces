@@ -1,5 +1,10 @@
-body{
-	background-image: url(fondo.jpg);
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Establece la altura del cuerpo al 100% de la ventana de visualización */
+    background-image: url('fondo.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* La imagen se ajusta al tamaño de la ventana de visualización manteniendo su relación de aspecto */
+    background-position: center; /* Centra la imagen en la ventana de visualización */
 }
 
 *{
@@ -13,9 +18,10 @@ nav{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	min-height: 10vh;
+	min-height: 8vh;
 	font-family:'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
-	background-color:  #000000;
+	background-color:  rgba(255, 255, 255, .2);
+	backdrop-filter: blur(10px);
 }
 
 .logo{
@@ -25,7 +31,7 @@ nav{
 	font-size: 20px;
 }
 .logo p{
-	color:#4cb495  ;
+	color:#ebcb55  ;
 	text-transform: lowercase;
 	letter-spacing: 3px;
 	font-size: 16px;
@@ -37,24 +43,57 @@ nav{
 	justify-content: space-around;
 	width:35% ;
 }
+
+
 .nav-links li{
 	list-style: none;
 }
+.nav-links li a i {
+	margin-right: 5px; /* Espacio entre el icono y el texto */
+	vertical-align: middle; /* Alinea verticalmente el ícono */
+}
+.nav-links li a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-family: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+	font-weight: 200;
+	font-size: 17px;
+	padding: 10px 20px;
+	border-radius: 47%;
+	color: #ebcb55;
+}
+.nav-links a i,
+.nav-links a {
+	display: inline-block;
+}
+.nav-links li i {
+	color: #ffffff;
+	margin-right: 5px; /* Ajusta el espacio entre el icono y el texto según sea necesario */
+}
+
+
+.nav-links a:hover{
+	box-shadow: 0px 0px 20px 20px #d1b757;
+	transition:all 0.4s ease;
+}
+
 .nav-links a{
 	text-decoration: none;
 	letter-spacing: 2px;
 	font-family:'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
 	font-weight: 200;
 	font-size: 17px;
+	padding: 10px 20px;
+	border-radius: 47%;
 }
-.numbers{
-	color:#4cb495;
-}
+
 .links{
-	color:#ffffff;
+	color:#ebcb55;
 }
 .links:hover{
-	color: #4cb495;
+	color: #ffffff;
 }
 
 
@@ -66,30 +105,31 @@ nav{
 .burger div{
 	width: 25px;
 	height: 3px;
-	background-color:#ffffff ;
+	background-color:#ebcb55 ;
 	margin: 5px;
 	transition:all 0.4s ease;
 }
 .burger div:hover{
-	background-color: #4cb495;
+	background-color: #ebcb55;
 }
 
 @media screen and (max-width: 1024px){
 	.nav-links{
 		width: 60%;
+		
 	}
 }
 @media screen and (max-width: 768px){
 	body{
 		overflow-x: hidden;
 	}
+
 	.nav-links{
 		position: absolute;
 		right: 0px;
 		height: 92vh;
 		top: 8vh;
-		background-color: #000000;
-;
+		background-color: rgba(255, 255, 255, .2);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -98,18 +138,18 @@ nav{
 		transition: transform 0.4s ease-in ;
 		
 	}
+
+
 	.nav-links li{
-		opacity: 0;
+		opacity: 0;	
 	}
 	.burger{
-	display: block;
-	color: #ffffff;
+		display: block;
+		color: #ffffff;
 	}
 
 }
 
-
-/*HERE GOES THE NAV ANIMATIONS*/
 .nav-active{
 	transform: translateX(0%);
 }
@@ -136,4 +176,3 @@ nav{
 .toggle .line3{
 	transform: rotate(45deg) translate(-5px,-6px);
 }
-
