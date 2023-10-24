@@ -5,6 +5,7 @@ body {
     background-image: url('fondo.jpg'); /* Ruta de tu imagen */
     background-size: cover; /* La imagen se ajusta al tamaño de la ventana de visualización manteniendo su relación de aspecto */
     background-position: center; /* Centra la imagen en la ventana de visualización */
+	font-family: 'Poppins';
 }
 
 *{
@@ -19,7 +20,6 @@ nav{
 	justify-content: space-around;
 	align-items: center;
 	min-height: 8vh;
-	font-family:'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
 	background-color:  rgba(255, 255, 255, .2);
 	backdrop-filter: blur(10px);
 }
@@ -31,11 +31,7 @@ nav{
 	font-size: 20px;
 }
 .logo p{
-<<<<<<< HEAD
 	color:#ebcb55  ;
-=======
-	color:#0ae5e1  ;
->>>>>>> fe8c017aea8476e72eeb23055e023004d101dee7
 	text-transform: lowercase;
 	letter-spacing: 3px;
 	font-size: 16px;
@@ -61,7 +57,6 @@ nav{
 	align-items: center;
 	text-decoration: none;
 	letter-spacing: 2px;
-	font-family: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
 	font-weight: 200;
 	font-size: 17px;
 	padding: 10px 20px;
@@ -92,22 +87,11 @@ nav{
 	padding: 10px 20px;
 	border-radius: 47%;
 }
-<<<<<<< HEAD
-
-=======
-.numbers{
-	color:#0ae5e1;
-}
->>>>>>> fe8c017aea8476e72eeb23055e023004d101dee7
 .links{
 	color:#ebcb55;
 }
 .links:hover{
-<<<<<<< HEAD
 	color: #ffffff;
-=======
-	color: #0ae5e1;
->>>>>>> fe8c017aea8476e72eeb23055e023004d101dee7
 }
 
 
@@ -119,20 +103,12 @@ nav{
 .burger div{
 	width: 25px;
 	height: 3px;
-<<<<<<< HEAD
 	background-color:#ebcb55 ;
-=======
-	background-color:#0ae5e1 ;
->>>>>>> fe8c017aea8476e72eeb23055e023004d101dee7
 	margin: 5px;
 	transition:all 0.4s ease;
 }
 .burger div:hover{
-<<<<<<< HEAD
 	background-color: #ebcb55;
-=======
-	background-color: #0ae5e1;
->>>>>>> fe8c017aea8476e72eeb23055e023004d101dee7
 }
 
 @media screen and (max-width: 1024px){
