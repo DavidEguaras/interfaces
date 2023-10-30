@@ -32,7 +32,7 @@ header {
     display: flex;
     flex-direction: row;
     padding: 10px;
-    background-color: rgb(202, 70, 194);
+    background-color: none;
 }
 
 .caja1 .imagen {
@@ -110,7 +110,6 @@ header {
     -ms-transition: all .25s ease;
     -o-transition: all .25s ease;
     transition: all .25s ease;
-    border-radius: 5%;
 }
 
 .menuPrincipal a:hover {           
@@ -154,16 +153,26 @@ li:hover ul.sublista {
 .sublista li {
     clear: both;
     width: 100%;
-    text-shadow: 1px 1px 2px black, 0 0 25px rgb(81, 197, 189), 0 0 5px rgb(81, 197, 189);
+    font-weight: bold;
 }       
 
 .menuPrincipal .sublista li a {
-    background-color: #2d2d2d;
+    background-color: #ab9e9e;
 }
 
-.sublista li a:hover {
-    background: #6dd7db;
+.sublista li a:hover{
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(49, 182, 230),
+    0 0 82px rgb(49, 182, 230),
+    0 0 92px rgb(49, 182, 230),
+    0 0 102px rgb(49, 182, 230),
+    0 0 151px rgb(49, 182, 230);
 }
+
 
 
 
@@ -174,8 +183,29 @@ li:hover ul.sublista {
     justify-content: space-evenly;
     align-items: flex-end;
     min-width: 200px;
-    background-color: rgb(83, 146, 35);
+    background-color: none;
+    margin-bottom: 10px;
 }
+
+.caja3 a{
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.caja3 a:hover{
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(49, 182, 230),
+    0 0 82px rgb(49, 182, 230),
+    0 0 92px rgb(49, 182, 230),
+    0 0 102px rgb(49, 182, 230),
+    0 0 151px rgb(49, 182, 230);
+}
+
 
 
 .menuPrincipal{
@@ -264,10 +294,43 @@ footer {
     /*vamos a apilar el contenido en esta caja*/
     flex-direction: row;
     /*color para la caja*/
-    background-color: rgb(97, 239, 255);
+    background: linear-gradient(to left, #000, #3fa5a0);
     /*hacemos que crezca según el contenido*/
     flex-grow: 1;
     /*lo quitaremos según metamos el contenido*/
     min-height: 20vh;
+    border-top: 4px solid rgb(81, 197, 189);
+    flex-wrap:wrap;
+    color: #fff;
 
+}
+
+.footer-column{
+    text-align: left;
+}
+
+.footer-column a{
+    text-decoration: none;
+    font-size: 14px;
+    padding :6px;
+    color: white;
+    transition: color 0.4s;
+    margin:4px;
+}
+
+.footer-column a:hover{
+    color: rgb(61, 189, 172);
+}
+.footer-column a:hover i{
+    margin-right: 10px;
+    color: #000000;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(49, 182, 230),
+    0 0 82px rgb(49, 182, 230),
+    0 0 92px rgb(49, 182, 230),
+    0 0 102px rgb(49, 182, 230),
+    0 0 151px rgb(49, 182, 230);
 }

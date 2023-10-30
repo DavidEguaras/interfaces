@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fuentes-->
+    <link href="https://fonts.cdnfonts.com/css/symphony-script" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/i-irrigation-shallow" rel="stylesheet">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        
+        body {
+            /* Estilos para el cuerpo de la página */
+            background-color: lightgray;
+            /* Color de fondo para distinguir la caja */
+            margin: 0px;
+            /* Quitamos el margen con la caja html */
+            min-height: 100vh;
+            /* Garantizamos que el contenedor del cuerpo ocupe el 100% de la ventana al cargar */
+            font-family: 'Montserrat', sans-serif;
+            /* Fuente utilizada en el cuerpo */
+        }
+
+        a {
+            /* Estilos para enlaces */
+            text-decoration: none;
+            /* Quitamos la decoración de los enlaces (subrayado) */
+            color: white;
+            /* Color del texto en los enlaces */
+            font-size: 16px;
+            /* Tamaño de fuente para los enlaces */
+        }
+
+
+        header {
+            display: flex;
+            /*flex-direction:row VALOR POR DEFECTO, por eso no lo especificamos*/
+            /*especificamos la altura mientras rellenamos con el contenido, pero no es necesario definir medidas, el conteindo y el padding y margin serán suficientes*/
+            /* min-height: 100px;*/
+            /*damos un color para distinguir la caja*/
+            background: linear-gradient(to left, #000, #777);
+            /*aplicamos margen con la caja contenedora para poder distinguir la caja exterior*/
+            /* padding: 10px;*/
+            border-bottom: 4px solid rgb(175, 21, 116);
+        }
+
+        .caja1 {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            background-color: none
+        }
+
+        .caja1 .imagen {
+            width: 100px;
+            height: 100px;
+            background-color: none;
+        }
+
+        .slogan {
+            /*hacemos la caja del slogan flexible para poder mover el h3 dentro de ella*/
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .slogan h3 {
+            /*ajustamos los margenes y el padding del h3 para poner la imagen a la altura de la imagen que queramos*/
+            padding: 0px;
+            margin: 5px;
+            background: linear-gradient(to right, rgb(246, 80, 191), white);
+            -webkit-background-clip: text;
+            color: transparent;
+            /*la fuente mejor en el body, para usar lo mismo para toda la pagina*/
+            /*Hemos importado un enlace para las fuentes*/
+            /*Enlace para las fuentes       https://www.cdnfonts.com/i-irrigation-shallow.font */
+            font-family: 'i Irrigation Shallow', sans-serif;
+            font-size: 2em;
+        }
+
+        /*contenedor 2 del header*/
+        /* Establece estilos para la clase .caja2 */
+        .caja2 {
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            flex-grow: 1;
+            /* Permite que el elemento crezca para ocupar espacio disponible */
+            background-color: none;
+            /* Configura el fondo como "ninguno", probablemente un error, ya que "none" no es un valor válido */
+            align-items: flex-end;
+            /* Alinea los elementos secundarios al final del contenedor */
+        }
+
+        /* Establece estilos para el menú principal */
+        .menuPrincipal {
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            flex-grow: 1;
+            /* Permite que el elemento crezca para ocupar espacio disponible */
+            justify-content: flex-end;
+            /* Alinea el contenido al extremo derecho del contenedor */
+        }
+
+        /* Establece estilos para la lista principal dentro del menú principal */
+        .menuPrincipal .listaPrincipal {
+            display: flex;
+            /* Hace que la lista sea un contenedor flexible */
+            flex-direction: row;
+            /* Establece la dirección de los elementos secundarios como una fila */
+            justify-content: flex-end;
+            /* Alinea el contenido al extremo derecho del contenedor */
+        }
+
+        /* Establece estilos para las listas no ordenadas y elementos de lista dentro del menú principal */
+        .menuPrincipal ul,
+        .menuPrincipal li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Establece estilos para la lista no ordenada dentro del menú principal */
+        .menuPrincipal ul {
+            list-style: none;
+            /* Elimina los marcadores de lista */
+            width: 100%;
+            /* Establece el ancho en 100% del contenedor */
+        }
+
+        /* Establece estilos para los elementos de lista dentro del menú principal */
+        .menuPrincipal li {
+            position: relative;
+            /* Establece la posición como relativa */
+            width: auto;
+            /* El ancho se ajusta automáticamente al contenido */
+        }
+
+        /* Establece estilos para los enlaces (anclas) dentro del menú principal */
+        .menuPrincipal a {
+            color: #FFFFFF;
+            /* Establece el color del texto en blanco */
+            display: block;
+            /* Convierte los enlaces en bloques para ocupar todo el ancho disponible */
+            font: bold 13px/20px sans-serif;
+            /* Configura la fuente y su tamaño */
+            padding: 10px 25px;
+            /* Agrega relleno (padding) alrededor del enlace */
+            text-align: center;
+            /* Centra el texto horizontalmente en el enlace */
+            text-decoration: none;
+            /* Elimina la decoración del enlace (subrayado) */
+            -webkit-transition: all .25s ease;
+            /* Agrega una transición suave en navegadores Webkit (Safari, Chrome) */
+            -moz-transition: all .25s ease;
+            /* Agrega una transición suave en navegadores Mozilla (Firefox) */
+            -ms-transition: all .25s ease;
+            /* Agrega una transición suave en navegadores Microsoft (Internet Explorer) */
+            -o-transition: all .25s ease;
+            /* Agrega una transición suave en navegadores Opera */
+            transition: all .25s ease;
+            /* Agrega una transición suave para todos los navegadores */
+        }
+
+        /* Establece estilos para los enlaces en estado "hover" (al pasar el mouse sobre ellos) */
+        .menuPrincipal a:hover {
+            color: #ff31c8;
+            /* Cambia el color del texto al pasar el mouse a un tono de rosa */
+        }
+
+
+        /* Establece estilos para los iconos (elementos <i>) dentro de los enlaces del menú principal */
+        .menuPrincipal a i {
+            color: #ff31c8;
+            /* Establece el color del icono en rosa (#ff31c8) */
+            margin: 4px;
+            /* Agrega un margen de 4 píxeles alrededor del icono */
+        }
+
+        /* Establece estilos para los elementos de lista en estado "hover" dentro del menú principal */
+        .menuPrincipal li:hover a {
+            background: #ff9cd9;
+            /* Cambia el fondo del enlace al pasar el mouse a rosa claro (#ff9cd9) */
+        }
+
+        /* Establece estilos para las sublistas */
+        .sublista {
+            left: 0;
+            /* Posición izquierda en 0 píxeles, ubicando las sublistas en la esquina izquierda */
+            opacity: 0;
+            /* Opacidad inicialmente en 0, lo que las hace invisibles */
+            position: absolute;
+            /* Establece una posición absoluta para un posicionamiento preciso */
+            top: 35px;
+            /* Coloca las sublistas a 35 píxeles desde la parte superior de su contenedor */
+            visibility: hidden;
+            /* Inicialmente, las hace invisibles */
+            z-index: 1;
+            /* Establece un índice z de 1 para controlar la superposición de elementos */
+        }
+
+
+        /* Establece estilos para sublistas en estado "hover" (al pasar el mouse sobre ellas) */
+        li:hover ul.sublista {
+            opacity: 1;
+            /* Hace que las sublistas sean visibles al pasar el mouse */
+            top: 40px;
+            /* Ajusta la posición superior de las sublistas */
+            visibility: visible;
+            /* Hace que las sublistas sean visibles */
+            -webkit-box-shadow: -6px 10px 5px 0px rgb(237, 130, 210);
+            /* Agrega una sombra en navegadores webkit */
+            -moz-box-shadow: -6px 10px 5px 0px rgb(237, 130, 210);
+            /* Agrega una sombra en navegadores Mozilla */
+            box-shadow: -6px 10px 5px 0px rgb(237, 130, 210);
+            /* Agrega una sombra */
+            /* Muestra sublistas y agrega sombras al pasar el mouse */
+        }
+
+        /* Establece estilos para los elementos de lista en las sublistas */
+        .sublista li {
+            clear: both;
+            /* Limpia los flotantes en los elementos de lista */
+            width: 100%;
+            /* Establece el ancho al 100% */
+            text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 0, 81), 0 0 5px rgb(120, 6, 31);
+            /* Agrega sombras al texto */
+            /* Configura varios estilos para elementos de lista en sublistas */
+        }
+
+        /* Establece estilos para los enlaces dentro de sublistas */
+        .menuPrincipal .sublista li a {
+            background-color: #2d2d2d;
+            /* Establece el fondo de los enlaces en sublistas */
+        }
+
+        /* Establece estilos para los enlaces en sublistas en estado "hover" */
+        .sublista li a:hover {
+            background: #ff9cd9;
+            /* Cambia el fondo de los enlaces en sublistas al pasar el mouse */
+        }
+
+
+
+        /* Establece estilos para la clase .caja3 */
+        .caja3 {
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            flex-direction: row;
+            /* Establece la dirección de los elementos secundarios como una fila */
+            justify-content: space-evenly;
+            /* Distribuye el espacio entre los elementos secundarios de manera uniforme */
+            align-items: flex-end;
+            /* Alinea los elementos secundarios al extremo inferior del contenedor */
+            margin-bottom: 10px;
+            /* Agrega un margen en la parte inferior del elemento */
+            min-width: 200px;
+            /* Establece el ancho mínimo del elemento en 200px */
+            background-color: none;
+            /* Configura el fondo como "ninguno", probablemente un error, ya que "none" no es un valor válido */
+        }
+
+        /* Establece estilos para los enlaces (anclas) dentro de la clase .caja3 */
+        .caja3 a {
+            font-weight: bold;
+            /* Establece el peso de la fuente como negrita */
+            font-size: 13px;
+            /* Establece el tamaño de fuente en 13px */
+            margin-bottom: 3px;
+            /* Agrega un margen en la parte inferior del enlace */
+        }
+
+        /* Establece estilos para los enlaces en estado "hover" dentro de la clase .caja3 */
+        .caja3 a:hover {
+            text-shadow: 12px 2px 25px rgba(128, 0, 0, 1), -6px 5px 22px rgba(125, 69, 26, 1), 4px -16px 19px rgba(66, 112, 93, 1), 6px 7px 23px rgba(99, 99, 44, 1), -3px 13px 14px rgba(86, 85, 116, 1), 14px -4px 20px rgba(203, 56, 72, 1);
+            /* Agrega un efecto de sombra al texto al pasar el mouse */
+        }
+
+        /* Establece estilos para los iconos (elementos <i>) dentro de los enlaces de la clase .caja3 */
+        .caja3 a i {
+            margin-right: 6px;
+            /* Agrega un margen derecho de 6px */
+            color: #ff016f;
+            /* Establece el color del icono en #ff016f */
+        }
+
+        /* Establece estilos para la etiqueta <main> */
+        main {
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            flex-direction: column;
+            /* Establece la dirección de los elementos secundarios como una columna */
+            background-color: rgb(255, 255, 97);
+            /* Establece el color de fondo en un tono amarillo */
+            flex-grow: 1;
+            /* Permite que el elemento crezca para ocupar espacio disponible */
+            min-height: 110vh;
+            /* Establece la altura mínima en 110vh (el 100% del viewport height más un 10%) */
+        }
+
+        /* Establece estilos para la clase .contenedor dentro de la etiqueta <main> */
+        main .contenedor {
+            margin: 5px;
+            /* Agrega un margen de 5px alrededor del elemento */
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            flex-direction: row;
+            /* Establece la dirección de los elementos secundarios como una fila */
+            background-color: rgb(234, 168, 168);
+            /* Establece el color de fondo en un tono específico */
+        }
+
+        /* Establece estilos para la clase .cajaMain1 dentro de la etiqueta <main> */
+        main .cajaMain1 {
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            margin: 5px;
+            /* Agrega un margen de 5px alrededor del elemento */
+            height: 50px;
+            /* Establece la altura del elemento en 50px */
+            width: 50px;
+            /* Establece el ancho del elemento en 50px */
+            background-color: lightblue;
+            /* Establece el color de fondo en un tono específico */
+        }
+
+        /* Establece estilos para la clase .contenedorDoble dentro de la etiqueta <main> */
+        main .contenedorDoble {
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            flex-direction: row;
+            /* Establece la dirección de los elementos secundarios como una fila */
+            flex-wrap: wrap;
+            /* Permite que los elementos se envuelvan si no caben en una fila */
+            margin: 5px;
+            /* Agrega un margen de 5px alrededor del elemento */
+            background-color: rgb(178, 115, 32);
+            /* Establece el color de fondo en un tono específico */
+            justify-content: space-evenly;
+            /* Distribuye el espacio entre los elementos secundarios de manera uniforme */
+        }
+
+        /* Establece estilos para la clase .cajaMain2 dentro de la etiqueta <main> */
+        main .cajaMain2 {
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            margin: 5px;
+            /* Agrega un margen de 5px alrededor del elemento */
+            height: 350px;
+            /* Establece la altura del elemento en 350px */
+            width: 650px;
+            /* Establece el ancho del elemento en 650px */
+            background-color: lightblue;
+            /* Establece el color de fondo en un tono específico */
+        }
+
+        /* Establece estilos para la clase .contenedorGrande dentro de la etiqueta <main> */
+        main .contenedorGrande {
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            flex-direction: row;
+            /* Establece la dirección de los elementos secundarios como una fila */
+            flex-wrap: wrap;
+            /* Permite que los elementos se envuelvan si no caben en una fila */
+            margin: 5px;
+            /* Agrega un margen de 5px alrededor del elemento */
+            background-color: rgb(217, 153, 180);
+            /* Establece el color de fondo en un tono específico */
+            justify-content: space-evenly;
+            /* Distribuye el espacio entre los elementos secundarios de manera uniforme */
+        }
+
+        /* Establece estilos para la clase .cajaMain3 dentro de la etiqueta <main> */
+        main .cajaMain3 {
+            display: flex;
+            /* Hace que el elemento sea un contenedor flexible */
+            margin: 5px;
+            /* Agrega un margen de 5px alrededor del elemento */
+            height: 350px;
+            /* Establece la altura del elemento en 350px */
+            width: 1250px;
+            /* Establece el ancho del elemento en 1250px */
+            background-color: rgb(171, 250, 102);
+            /* Establece el color de fondo en un tono específico */
+        }
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        footer {
+            /*hacemos flex esta caja porque porque vamos a meter mas cosas dentro, al menos en principio*/
+            display: flex;
+            /*valor por defecto*/
+            /*flex-direction: row;*/
+            /*color del texto para la caja*/
+            color: #fff;
+            /*espacio del contenido al borde*/
+            padding: 20px;
+            /*hacemos que el contenido sea envuelto si se reduce el navegador*/
+            flex-wrap: wrap;
+            /*igualamos el espacio entre columnas*/
+            justify-content: space-between;
+            /*Establecemos el borde superior de la caja*/
+            border-top: 4px solid rgb(175, 21, 116);
+            /*hacemos que crezca según el contenido*/
+            /*lo quitaremos según metamos el contenido*/
+            min-height: 15vh;
+            /*hacemos un degradado para el fondo de la caja*/
+            background: linear-gradient(to left, #000, #777);
+        }
+
+        .footer-column {
+
+            /* Permite que las columnas crezcan y ocupen espacio igualmente */
+            text-align: left;
+        }
+
+        .footer-column a {
+            text-decoration: none;
+            /* Elimina la decoración del enlace */
+            font-size: 14px;
+            /* Establece el tamaño de fuente a 16 píxeles */
+            flex-grow: 1;
+            /* Permite que los elementos crezcan para ocupar el espacio disponible */
+            padding: 6px;
+
+            /* Agrega un relleno de 16 píxeles */
+            color: white;
+            /* Establece el color del texto en blanco */
+            transition: color 0.4s;
+            /* Agrega una transición suave del color durante 0.4 segundos */
+            margin: 4px;
+        }
+
+
+        .footer-column a:hover {
+            color: rgb(134, 4, 98);
+            /* Cambia el color del texto al pasar el mouse */
+        }
+
+        .footer-column a:hover i {
+            color: white
+                /* Cambia el color del texto al pasar el mouse */
+        }
+
+
+
+        /* Establece estilos para el título (h4) dentro de las columnas del footer */
+        .footer-column h4 {
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles */
+        }
+
+        /* Establece estilos para los iconos (elementos <i>) dentro de las columnas del footer */
+        .footer-column i {
+            margin-right: 10px;
+            /* Agrega un margen derecho de x píxeles */
+            color: #75007d
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            /* Agrega un margen derecho de 5 píxeles */
+        }
+
+        /* Establece estilos para las listas no ordenadas (ul) dentro de las columnas del footer */
+        .footer-column ul {
+            /*muestra la lista sin viñetas*/
+            list-style: none;
+            /*nada de margen por la izquierda*/
+            margin-left: 0px;
+            /*nada de margen de relleno*/
+            padding: 0px;
+            /* Elimina los marcadores de lista predeterminados */
+        }
+
+        .footer-column .redes {
+
+            /* Agrega un margen izquierdo del 14% */
+        }
+
+
+
+        /* Establece estilos para la lista de iconos de redes sociales */
+        .social-icons {
+            list-style: none;
+            /* Elimina los marcadores de lista predeterminados */
+            padding: 2;
+            /* Elimina el relleno predeterminado */
+            display: flex;
+            /* Activa el modelo de caja flexible para la lista de iconos */
+            /* Permite que "social-icons" crezca y ocupe el espacio disponible */
+            margin: 0;
+            /* Elimina los márgenes predeterminados */
+            padding: 0;
+            /* Elimina el relleno predeterminado */
+            justify-content: left;
+            /* Alinea el contenido a la izquierda */
+            flex-grow: 1;
+        }
+
+
+        .footer-column .social-icons a:hover {
+            color: white;
+            /* Cambia el color del texto al pasar el mouse */
+        }
+
+        /* Establece estilos para la clase "redes" dentro de elementos con clase "footer-column" */
+
+
+        /* Establece estilos para los elementos de lista (li) dentro de la lista de iconos de redes sociales */
+        .social-icons li {
+            margin-right: 10px;
+            /* Agrega un margen derecho de 10 píxeles entre los elementos de lista */
+        }
+
+        /* Establece estilos para los enlaces (a) dentro de la lista de iconos de redes sociales */
+        .social-icons a {
+            text-decoration: none;
+            /* Elimina la decoración del enlace */
+            color: #fff;
+            /* Establece el color del texto en blanco */
+            font-size: 24px;
+            /* Establece el tamaño de fuente en 24 píxeles */
+            display: inline-block;
+            /* Muestra los enlaces como bloques en línea */
+            background: #b13aa4;
+            /* Establece el color de fondo del enlace */
+            width: 40px;
+            /* Establece el ancho del enlace en 40 píxeles */
+            height: 40px;
+            /* Establece la altura del enlace en 40 píxeles */
+            /* Alinea el texto al centro del enlace */
+            border-radius: 50%;
+            /* Agrega un borde redondeado */
+            transition: background 0.4s;
+            /* Agrega una transición suave del color de fondo durante 0.4 segundos */
+        }
+
+        /* Establece estilos para los elementos <i> dentro de elementos con clase "social-icons" */
+        .social-icons i {
+            font-size: 30px;
+            /* Establece el tamaño de fuente en 30 píxeles */
+            margin-left: 6px;
+            /* Agrega un margen izquierdo de 6 píxeles */
+            margin-top: 6px;
+            /* Agrega un margen superior de 6 píxeles */
+            /*aplicamos un estilo propio, sobre el general que hemos aplicado para el elemento i de las columnas*/
+            color: white;
+        }
+
+        /* Establece estilos para los elementos <i> dentro de elementos con clase "social-icons" cuando se aplica el estado "hover" (se pasa el mouse sobre ellos) */
+        .social-icons i:hover {
+            font-size: 30px;
+            /* Mantiene el tamaño de fuente en 30 píxeles al pasar el mouse */
+            color: white;
+            /* Cambia el color del texto a blanco al pasar el mouse */
+        }
+
+
+        /* Establece estilos para los enlaces (a) dentro de la lista de iconos de redes sociales cuando se les aplica el estado "hover" (se pasa el mouse sobre ellos) */
+        .social-icons a:hover {
+            background: #75007d;
+            /* Cambia el color de fondo del enlace al pasar el mouse */
+        }
+
+        /* Establece estilos para el formulario dentro de las columnas del footer */
+        .footer-column form {
+            margin-top: 40px;
+            display: flex;
+            /* Activa el modelo de caja flexible para el formulario */
+        }
+
+        /* Establece estilos para el campo de entrada de texto en el formulario */
+        .footer-column input[type="text"] {
+            width: 70%;
+            /* Establece el ancho del campo de entrada en un 70% del contenedor */
+            padding: 5px;
+            /* Agrega un relleno de 5 píxeles */
+        }
+
+        /* Establece estilos para el botón en el formulario */
+        .footer-column button {
+            width: 40%;
+            /* Establece el ancho del botón en un 100% del contenedor */
+            background-color: #9b059d;
+            /* Establece el color de fondo del botón */
+            color: #fff;
+            /* Establece el color del texto en blanco */
+            border: none;
+            /* Elimina el borde */
+            padding: 10px;
+            /* Agrega un relleno de 10 píxeles */
+            cursor: pointer;
+            /* Cambia el cursor al puntero al pasar el mouse */
+            transition: background-color 1s;
+            /* Agrega una transición suave del color de fondo durante 0.4 segundos */
+        }
+
+        /* Establece estilos para el botón en el formulario cuando se les aplica el estado "hover" (se pasa el mouse sobre él) */
+        .footer-column button:hover {
+            background-color: #cf00d6;
+            /* Cambia el color de fondo del botón al pasar el mouse */
+        }
+
+        /* Establece estilos para las citas en el footer */
+        .footer-colum.quotes {
+            flex: 1;
+            /* Permite que las citas crezcan y ocupen espacio igualmente */
+            display: flex;
+            /* Activa el modelo de caja flexible para elementos con clase "quotes" en el footer */
+            flex-direction: row;
+            /* Establece una dirección de fila para los elementos hijos de las citas */
+            margin-top: 5px;
+            /* Agrega un margen superior de 5 píxeles */
+        }
+
+        /* Establece estilos para las citas (blockquote) en el footer */
+        blockquote {
+
+
+            /* Permite que los elementos hijos se envuelvan cuando no quepan en una línea */
+            font-style: italic;
+            /* Establece el estilo de fuente en cursiva */
+            margin: 0px;
+            /* Elimina el margen predeterminado */
+            padding: 0px;
+            /* Elimina el relleno predeterminado */
+            /* Agrega un margen inferior de 10 píxeles */
+        }
+
+        /* Establece estilos para los párrafos (p) dentro de las citas en el footer */
+        .quotes blockquote p {
+            margin-left: 12px;
+            /* Agrega un margen izquierdo de 12 píxeles */
+            font-size: 12px;
+            /* Establece el tamaño de fuente en 12 píxeles */
+            margin-top: 15px;
+            /* Agrega un margen superior de 15 píxeles */
+            /* Elimina el margen predeterminado de los párrafos */
+        }
+
+        .quotes blockquote p span {
+            color: #75007d;
+            /* Establece el color del texto en un tono específico (#75007d) */
+            /* Elimina el margen predeterminado de los párrafos */
+        }
+
+        .footer-column .quotes blockquote p span.copyright {
+            /* Permite que los elementos de clase "copyright" crezcan y ocupen espacio igualmente */
+            margin-left: 25px;
+            /* Agrega un margen izquierdo de 20 píxeles */
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles */
+            color: #f3ddf5;
+            /* Establece el color del texto en un tono específico (#f3ddf5) */
+            /* Elimina el margen predeterminado de los párrafos */
+        }
+    </style>
+
+
+    <header>
+        <div class="caja1">
+            <img src="logo.png" class="imagen">
+            <div class="slogan">
+                <h3>Eslogan WEB</h3>
+            </div>
+        </div>
+        <div class="caja2">
+            <nav class="menuPrincipal">
+                <ul class="listaPrincipal">
+                    <li class="opcionPrincipal"><a class="enlaceListaPrincipal" href=""><i class="fas fa-home"></i>
+                            Inicio</a></li>
+                    <li class="opcionPrincipal"><a class="enlaceListaPrincipal" href=""><i class="fas fa-globe"></i>
+                            Acerca</a></li>
+                    <li class="opcionPrincipal"> <a class="enlaceListaPrincipal" href=""><i class="fas fa-list"></i>
+                            Servicios</a>
+                        <ul class="sublista">
+                            <li class="subOpcion"><a class="enlaceSubLista" href="">Servicio 1</a></li>
+                            <li class="subOpcion"><a class="enlaceSubLista" href="">Servicio 2</a></li>
+                            <li class="subOpcion"> <a class="enlaceSubLista" href="">Servicio 3</a></li>
+                            <li class="subOpcion"><a class="enlaceSubLista" href="">Servicio 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="opcionPrincipal"><a class="enlaceListaPrincipal" href=""><i class="fas fa-envelope"></i>
+                            Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="caja3">
+            <a class="enlaceListaUsuario" href=""><i class="fas fa-user"></i>Login</a>
+            <a class="enlaceListaUsuario" href=""><i class="fas fa-user-plus"></i>Registro</a></li>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+        </div>
+        <div class="contenedor">
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+        </div>
+
+        <div class="contenedorDoble">
+            <div class="cajaMain2"></div>
+            <div class="cajaMain2"></div>
+        </div>
+
+        <div class="contenedorGrande">
+            <div class="cajaMain3"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Principal, Ciudad</p>
+            <p><i class="fas fa-envelope"></i> Correo: info@miempresa.com</p>
+            <p><i class="fas fa-phone"></i> Teléfono: +1 234 567 890</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> Acerca de nosotros</a></li>
+                <li><a href="#"><i class="fas fa-list"></i> Servicios</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Redes Sociales</h4>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column quotes">
+            <!-- Columna del pie de página para suscripción -->
+            <h4>¡Suscríbete a nuestro boletín!</h4>
+            <form class="footer-form" action="#" method="post">
+                <input type="text" name="email" placeholder="Tu dirección de correo" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+            <div class="footer-column quotes">
+                <!-- Sección de citas en el pie de página -->
+                <blockquote>
+                    <p>"El éxito no es la clave de la felicidad, es justo <span class="color"> al revés</span>."<span
+                            class="copyright">&nbsp;&nbsp;&nbsp;©</span> </p>
+                </blockquote>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
