@@ -1,0 +1,8 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.elemento1{
+    flex:1;
+}

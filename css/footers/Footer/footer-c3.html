@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        footer {
+            /*hacemos flex esta caja porque porque vamos a meter mas cosas dentro, al menos en principio*/
+            display: flex;
+            /*valor por defecto*/
+            /*flex-direction: row;*/
+            /*color del texto para la caja*/
+            color: #fff;
+            /*espacio del contenido al borde*/
+            padding: 20px;
+            /*hacemos que el contenido sea envuelto si se reduce el navegador*/
+            flex-wrap: wrap;
+            /*igualamos el espacio entre columnas*/
+            justify-content: space-between;
+            /*Establecemos el borde superior de la caja*/
+            border-top: 4px solid rgb(175, 21, 116);
+            /*hacemos que crezca según el contenido*/
+            /*lo quitaremos según metamos el contenido*/
+            min-height: 15vh;
+            /*hacemos un degradado para el fondo de la caja*/
+            background: linear-gradient(to left, #000, #777);
+        }
+
+        .footer-column {
+            text-align: left;
+            /* Permite que las columnas crezcan y ocupen espacio igualmente */
+        }
+
+        .footer-column .footer-column-distinta {
+            display: flex;
+            /*Hacemos que se apilen las cajas*/
+            flex-direction: column;
+        }
+
+
+        /* Establece estilos para el título (h4) dentro de las columnas del footer- Estilos GENERALES */
+        .footer-column h4 {
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles */
+        }
+
+        /* Establece estilos para el título h4Centrado dentro  */
+        .footer-column .h4Centrado {
+            display: flex;
+            /*hacemos flexible la caja para poder utilizar las propiedades flex*/
+            justify-content: center;
+            /*centramos el contenido de la caja h4*/
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles PARA ESTA CAJA!!! */
+        }
+
+        .footer-column a {
+            text-decoration: none;
+            /* Elimina la decoración del enlace */
+            font-size: 14px;
+            /* Establece el tamaño de fuente a 16 píxeles */
+            flex-grow: 1;
+            /* Permite que los elementos crezcan para ocupar el espacio disponible */
+            padding: 6px;
+            /* Agrega un relleno de 16 píxeles */
+            color: white;
+            /* Establece el color del texto en blanco */
+            transition: color 0.4s;
+            /* Agrega una transición suave del color durante 0.4 segundos */
+            margin: 4px;
+        }
+
+        .footer-column a:hover {
+            color: rgb(134, 4, 98);
+            /* Cambia el color del texto al pasar el mouse */
+        }
+
+        .footer-column a:hover i {
+            color: white
+                /* Cambia el color del texto al pasar el mouse */
+        }
+
+        /* Establece estilos para los iconos (elementos <i>) dentro de las columnas del footer */
+        .footer-column i {
+            margin-right: 10px;
+            /* Agrega un margen derecho de x píxeles */
+            color: #75007d
+                /*establece el color del icono*/
+        }
+
+        /* Establece estilos para los iconos (elementos <i>) dentro de las columnas del footer */
+        .footer-column i {
+            margin-right: 10px;
+            /* Agrega un margen derecho de x píxeles */
+            color: #75007d
+        }
+
+        /* Establece estilos para las listas no ordenadas (ul) dentro de las columnas del footer */
+        .footer-column ul {
+            /*muestra la lista sin viñetas*/
+            list-style: none;
+            /*nada de margen por la izquierda*/
+            margin-left: 0px;
+            /*nada de margen de relleno*/
+            padding: 0px;
+            /* Elimina los marcadores de lista predeterminados */
+        }
+
+        /* Establece estilos para los elementos de lista (li) dentro de la lista de iconos de redes sociales */
+        .social-icons li {
+            margin-right: 10px;
+            /* Agrega un margen derecho de 10 píxeles entre los elementos de lista */
+        }
+
+        /* Establece estilos para la lista de iconos de redes sociales */
+        .social-icons {
+            /*
+            list-style: none;*/
+            /*!!!!No es necesario ponerlo, porque???*/
+            /* Elimina los marcadores de lista predeterminados */
+            padding: 2;
+            /* Elimina el relleno predeterminado */
+            display: flex;
+            /* Activa el modelo de caja flexible para la lista de iconos */
+            /* Permite que "social-icons" crezca y ocupe el espacio disponible */
+            margin: 0;
+            /* Elimina los márgenes predeterminados */
+            padding: 0;
+            /* Elimina el relleno predeterminado */
+            justify-content: flex-start;
+            /* Alinea el contenido a la izquierda */
+        }
+
+        /* Establece estilos para los enlaces (a) dentro de la lista de iconos de redes sociales */
+        .social-icons a {
+            text-decoration: none;
+            /* Elimina la decoración del enlace */
+            color: #fff;
+            /* Establece el color del texto en blanco */
+            font-size: 24px;
+            /* Establece el tamaño de fuente en 24 píxeles */
+            display: block;
+            /* Muestra los enlaces como bloques en línea */
+            background: #b13aa4;
+            /* Establece el color de fondo del enlace */
+            width: 40px;
+            /* Establece el ancho del enlace en 40 píxeles */
+            height: 40px;
+            /* Establece la altura del enlace en 40 píxeles */
+            /* Alinea el texto al centro del enlace */
+            border-radius: 50%;
+            /* Agrega un borde redondeado */
+            transition: background 0.4s;
+            /* Agrega una transición suave del color de fondo durante 0.4 segundos */
+        }
+
+        .footer-column .social-icons a:hover {
+            color: white;
+            /* Cambia el color del texto al pasar el mouse */
+            background: #75007d;
+            /* Cambia el color de fondo del enlace al pasar el mouse */
+        }
+
+        /*para manipular el icono si hacemos hover en el enlace*/
+        .footer-column .social-icons a:hover i {
+            color: lightgrey;
+            /* Cambia el color del texto al pasar el mouse */
+        }
+
+        /* Establece estilos para los elementos <i> dentro de elementos con clase "social-icons" */
+        .social-icons i {
+            font-size: 30px;
+            /* Establece el tamaño de fuente en 30 píxeles */
+            margin-left: 6px;
+            /* Agrega un margen izquierdo de 6 píxeles */
+            margin-top: 6px;
+            /* Agrega un margen superior de 6 píxeles */
+            /*aplicamos un estilo propio, sobre el general que hemos aplicado para el elemento i de las columnas*/
+            color: white;
+        }
+
+        /* Establece estilos para los elementos <i> dentro de elementos con clase "social-icons" cuando se aplica el estado "hover" (se pasa el mouse sobre ellos) */
+        .social-icons i:hover {
+            font-size: 30px;
+            /* Mantiene el tamaño de fuente en 30 píxeles al pasar el mouse */
+            color: white;
+            /* Cambia el color del texto a blanco al pasar el mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="footer-column footer-column-distinta">
+            <h4 class="h4Centrado">Redes Sociales</h4>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+
+
+    </footer>
+</body>
+
+</html>

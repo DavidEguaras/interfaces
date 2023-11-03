@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        footer {
+            /*hacemos flex esta caja porque porque vamos a meter mas cosas dentro, al menos en principio*/
+            display: flex;
+            /*valor por defecto*/
+            /*flex-direction: row;*/
+            /*color del texto para la caja*/
+            color: #fff;
+            /*espacio del contenido al borde*/
+            padding: 20px;
+            /*hacemos que el contenido sea envuelto si se reduce el navegador*/
+            flex-wrap: wrap;
+            /*igualamos el espacio entre columnas*/
+            justify-content: space-between;
+            /*Establecemos el borde superior de la caja*/
+            border-top: 4px solid rgb(175, 21, 116);
+            /*hacemos que crezca según el contenido*/
+            /*lo quitaremos según metamos el contenido*/
+            min-height: 15vh;
+            /*hacemos un degradado para el fondo de la caja*/
+            background: linear-gradient(to left, #000, #777);
+        }
+
+        .footer-column {
+            /* Permite que las columnas crezcan y ocupen espacio igualmente */
+            text-align: left;
+        }
+
+        /* Establece estilos para el título (h4) dentro de las columnas del footer */
+        .footer-column h4 {
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles */
+        }
+
+        /* Establece estilos para los iconos (elementos <i>) dentro de las columnas del footer */
+        .footer-column i {
+            margin-right: 10px;
+            /* Agrega un margen derecho de x píxeles */
+            color: #75007d
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            /* Agrega un margen derecho de 5 píxeles */
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="footer-column">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Principal, Ciudad</p>
+            <p><i class="fas fa-envelope"></i> Correo: info@miempresa.com</p>
+            <p><i class="fas fa-phone"></i> Teléfono: +1 234 567 890</p>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+.contenedor {
+    display: flex;
+}
+
+.elemento {
+    padding: 3%;
+}

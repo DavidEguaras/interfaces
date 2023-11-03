@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        footer {
+            /*hacemos flex esta caja porque porque vamos a meter mas cosas dentro, al menos en principio*/
+            display: flex;
+            /*valor por defecto*/
+            /*flex-direction: row;*/
+            /*color del texto para la caja*/
+            color: #fff;
+            /*espacio del contenido al borde*/
+            padding: 20px;
+            /*hacemos que el contenido sea envuelto si se reduce el navegador*/
+            flex-wrap: wrap;
+            /*igualamos el espacio entre columnas*/
+            justify-content: space-between;
+            /*Establecemos el borde superior de la caja*/
+            border-top: 4px solid rgb(175, 21, 116);
+            /*hacemos que crezca según el contenido*/
+            /*lo quitaremos según metamos el contenido*/
+            min-height: 15vh;
+            /*hacemos un degradado para el fondo de la caja*/
+            background: linear-gradient(to left, #000, #777);
+        }
+
+        .footer-column {
+            text-align: left;
+            /* Permite que las columnas crezcan y ocupen espacio igualmente */
+        }
+
+        .footer-column .footer-column-distinta {
+            display: flex;
+            /*Hacemos que se apilen las cajas*/
+            flex-direction: column;
+        }
+
+
+        /* Establece estilos para el título (h4) dentro de las columnas del footer- Estilos GENERALES */
+        .footer-column h4 {
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles */
+        }
+
+        /* Establece estilos para el título h4Centrado dentro  */
+        .footer-column .h4Color {
+            display: flex;
+            /*hacemos flexible la caja para poder utilizar las propiedades flex*/
+            justify-content: center;
+            /*centramos el contenido de la caja h4*/
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles PARA ESTA CAJA!!! */
+            color: #a767a0;
+        }
+
+
+        /* Establece estilos para el título h4Centrado dentro  */
+         .h4Centrado {
+            display: flex;
+            /*hacemos flexible la caja para poder utilizar las propiedades flex*/
+            justify-content: center;
+            /*centramos el contenido de la caja h4*/
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles PARA ESTA CAJA!!! */
+        }
+
+          /* Establece estilos para los iconos (elementos <i>) dentro de las columnas del footer */
+            .footer-column i {
+            margin-right: 10px;
+            /* Agrega un margen derecho de x píxeles */
+            color: #75007d
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            /* Agrega un margen derecho de 5 píxeles */
+        }
+
+        .footer-column a {
+            text-decoration: none;
+            /* Elimina la decoración del enlace */
+            
+            font-size: 14px;
+            /* Establece el tamaño de fuente a 16 píxeles */
+            flex-grow: 1;
+            /* Permite que los elementos crezcan para ocupar el espacio disponible */
+            padding: 6px;
+            /* Agrega un relleno de 16 píxeles */
+            color: white;
+            /* Establece el color del texto en blanco */
+            transition: color 0.4s;
+            /* Agrega una transición suave del color durante 0.4 segundos */
+            margin: 4px;
+        }
+
+        .footer-column a:hover {
+            color: rgb(134, 4, 98);
+            /* Cambia el color del texto al pasar el mouse */
+        }
+
+        .footer-column a:hover i {
+            color: white
+                /* Cambia el color del texto al pasar el mouse */
+        }
+
+        /* Establece estilos para los iconos (elementos <i>) dentro de las columnas del footer */
+        .footer-column i {
+            margin-right: 10px;
+            /* Agrega un margen derecho de x píxeles */
+            color: #75007d
+                /*establece el color del icono*/
+        }
+
+        /* Establece estilos para los iconos (elementos <i>) dentro de las columnas del footer */
+        .footer-column i {
+            margin-right: 10px;
+            /* Agrega un margen derecho de x píxeles */
+            color: #75007d
+        }
+
+        /* Establece estilos para las listas no ordenadas (ul) dentro de las columnas del footer */
+        .footer-column ul {
+            /*muestra la lista sin viñetas*/
+            list-style: none;
+            /*nada de margen por la izquierda*/
+            margin-left: 0px;
+            /*nada de margen de relleno*/
+            padding: 0px;
+            /* Elimina los marcadores de lista predeterminados */
+        }
+
+        /* Establece estilos para los elementos de lista (li) dentro de la lista de iconos de redes sociales */
+        .social-icons li {
+            margin-right: 10px;
+            /* Agrega un margen derecho de 10 píxeles entre los elementos de lista */
+        }
+
+        /* Establece estilos para la lista de iconos de redes sociales */
+        .social-icons {
+            /*
+            list-style: none;*/
+            /*!!!!No es necesario ponerlo, porque???*/
+            /* Elimina los marcadores de lista predeterminados */
+            padding: 2;
+            /* Elimina el relleno predeterminado */
+            display: flex;
+            /* Activa el modelo de caja flexible para la lista de iconos */
+            /* Permite que "social-icons" crezca y ocupe el espacio disponible */
+            margin: 0;
+            /* Elimina los márgenes predeterminados */
+            padding: 0;
+            /* Elimina el relleno predeterminado */
+            justify-content: flex-start;
+            /* Alinea el contenido a la izquierda */
+        }
+
+        /* Establece estilos para los enlaces (a) dentro de la lista de iconos de redes sociales */
+        .social-icons a {
+            text-decoration: none;
+            /* Elimina la decoración del enlace */
+            color: #fff;
+            /* Establece el color del texto en blanco */
+            font-size: 24px;
+            /* Establece el tamaño de fuente en 24 píxeles */
+            display: block;
+            /* Muestra los enlaces como bloques en línea */
+            background: #b13aa4;
+            /* Establece el color de fondo del enlace */
+            width: 40px;
+            /* Establece el ancho del enlace en 40 píxeles */
+            height: 40px;
+            /* Establece la altura del enlace en 40 píxeles */
+            /* Alinea el texto al centro del enlace */
+            border-radius: 50%;
+            /* Agrega un borde redondeado */
+            transition: background 0.4s;
+            /* Agrega una transición suave del color de fondo durante 0.4 segundos */
+        }
+
+        .footer-column .social-icons a:hover {
+            color: white;
+            /* Cambia el color del texto al pasar el mouse */
+            background: #75007d;
+            /* Cambia el color de fondo del enlace al pasar el mouse */
+        }
+
+        /*para manipular el icono si hacemos hover en el enlace*/
+        .footer-column .social-icons a:hover i {
+            color: lightgrey;
+            /* Cambia el color del texto al pasar el mouse */
+        }
+
+        /* Establece estilos para los elementos <i> dentro de elementos con clase "social-icons" */
+        .social-icons i {
+            font-size: 30px;
+            /* Establece el tamaño de fuente en 30 píxeles */
+            margin-left: 6px;
+            /* Agrega un margen izquierdo de 6 píxeles */
+            margin-top: 6px;
+            /* Agrega un margen superior de 6 píxeles */
+            /*aplicamos un estilo propio, sobre el general que hemos aplicado para el elemento i de las columnas*/
+            color: white;
+        }
+
+        /* Establece estilos para los elementos <i> dentro de elementos con clase "social-icons" cuando se aplica el estado "hover" (se pasa el mouse sobre ellos) */
+        .social-icons i:hover {
+            font-size: 30px;
+            /* Mantiene el tamaño de fuente en 30 píxeles al pasar el mouse */
+            color: white;
+            /* Cambia el color del texto a blanco al pasar el mouse */
+        }
+
+        /* Establece estilos para el formulario dentro de las columnas del footer */
+        .footer-column form {
+            margin-top: 40px;
+            /*hacemos que el formulario sea flexible para que que se comporten los elementos como tal*/
+            display: flex;
+            /*Se colocaran los elementos en fila*/
+        }
+
+        /* Establece estilos para el campo de entrada de texto en el formulario */
+        .footer-column input[type="text"] {
+            /*Jugamos con el ancho del elemento para que ocupe un espacio de la caja*/
+            /*al estar configurado en filas, ocupara el 60% y se pegará al siguiente componente*/
+            width: 60%;
+            /* Establece el ancho del campo de entrada en un 70% del contenedor */
+            padding: 5px;
+            /* Agrega un relleno de 5 píxeles */
+        }
+
+        /* Establece estilos para el botón en el formulario */
+        .footer-column button {
+            width: 40%;
+            /* Establece el ancho del botón en un 100% del contenedor */
+            background-color: #9b059d;
+            /* Establece el color de fondo del botón */
+            color: #fff;
+            /* Establece el color del texto en blanco */
+            border: none;
+            /* Elimina el borde */
+            padding: 10px;
+            /* Agrega un relleno de 10 píxeles */
+            cursor: pointer;
+            /* Cambia el cursor al puntero al pasar el mouse */
+            transition: background-color 0.8s;
+            /* Agrega una transición suave del color de fondo durante 0.4 segundos */
+        }
+
+        /* Establece estilos para el botón en el formulario cuando se les aplica el estado "hover" (se pasa el mouse sobre él) */
+        .footer-column button:hover {
+            background-color: #cf00d6;
+            /* Cambia el color de fondo del botón al pasar el mouse */
+        }
+
+        /* Establece estilos para las citas en el footer */
+        .footer-colum.quotes {
+            flex: 1;
+            /* Permite que las citas crezcan y ocupen espacio igualmente */
+            display: flex;
+            /* Activa el modelo de caja flexible para elementos con clase "quotes" en el footer */
+           /* flex-direction: row;*/
+            /* Establece una dirección de fila para los elementos hijos de las citas */
+            margin-top: 5px;
+            /* Agrega un margen superior de 5 píxeles */
+        }
+
+        /* Establece estilos para las citas (blockquote) en el footer */
+        blockquote {
+            /* Permite que los elementos hijos se envuelvan cuando no quepan en una línea */
+            font-style: italic;
+            /* Establece el estilo de fuente en cursiva */
+            margin: 0px;
+            /* Elimina el margen predeterminado */
+            padding: 0px;
+            /* Elimina el relleno predeterminado */
+            /* Agrega un margen inferior de 10 píxeles */
+        }
+
+        /* Establece estilos para los párrafos (p) dentro de las citas en el footer */
+        blockquote p {
+            margin-left: 12px;
+            /* Agrega un margen izquierdo de 12 píxeles */
+            font-size: 12px;
+            /* Establece el tamaño de fuente en 12 píxeles */
+            margin-top: 15px;
+            /* Agrega un margen superior de 15 píxeles */
+            /* Elimina el margen predeterminado de los párrafos */
+        }
+
+         blockquote p span {
+            color: #75007d;
+            /* Establece el color del texto en un tono específico (#75007d) */
+            /* Elimina el margen predeterminado de los párrafos */
+        }
+
+        .footer-column blockquote p span.copyright {
+            /* Permite que los elementos de clase "copyright" crezcan y ocupen espacio igualmente */
+            margin-left: 25px;
+            /* Agrega un margen izquierdo de 20 píxeles */
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles */
+            color: #f3ddf5;
+            /* Establece el color del texto en un tono específico (#f3ddf5) */
+            /* Elimina el margen predeterminado de los párrafos */
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="footer-column">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Principal, Ciudad</p>
+            <p><i class="fas fa-envelope"></i> Correo: info@miempresa.com</p>
+            <p><i class="fas fa-phone"></i> Teléfono: +1 234 567 890</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> Acerca de nosotros</a></li>
+                <li><a href="#"><i class="fas fa-list"></i> Servicios</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column footer-column-distinta">
+            <h4 class="h4Centrado">Redes Sociales</h4>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column quotes">
+            <!-- Columna del pie de página para suscripción -->
+            <h4 class="h4Color">¡Suscríbete a nuestro boletín!</h4>
+            <form class="footer-form" action="#" method="post">
+                <input type="text" name="email" placeholder="Tu dirección de correo" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+            <div class="footer-column quotes">
+                <!-- Sección de citas en el pie de página -->
+                <blockquote>
+                    <p>"El éxito no es la clave de la felicidad, es justo <span class="color"> al revés</span>."<span
+                            class="copyright">&nbsp;&nbsp;&nbsp;©</span> </p>
+                </blockquote>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        footer {
+            /*hacemos flex esta caja porque porque vamos a meter mas cosas dentro, al menos en principio*/
+            display: flex;
+            /*valor por defecto*/
+            /*flex-direction: row;*/
+            /*color del texto para la caja*/
+            color: #fff;
+            /*espacio del contenido al borde*/
+            padding: 20px;
+            /*hacemos que el contenido sea envuelto si se reduce el navegador*/
+            flex-wrap: wrap;
+            /*igualamos el espacio entre columnas*/
+            justify-content: space-between;
+            /*Establecemos el borde superior de la caja*/
+            border-top: 4px solid rgb(175, 21, 116);
+            /*hacemos que crezca según el contenido*/
+            /*lo quitaremos según metamos el contenido*/
+            min-height: 15vh;
+            /*hacemos un degradado para el fondo de la caja*/
+            background: linear-gradient(to left, #000, #777);
+        }
+
+        .footer-column {
+            text-align: left;
+            /* Permite que las columnas crezcan y ocupen espacio igualmente */
+        }
+
+        .footer-column .footer-column-distinta {
+            display: flex;
+            /*Hacemos que se apilen las cajas*/
+            flex-direction: column;
+        }
+
+
+        /* Establece estilos para el título (h4) dentro de las columnas del footer- Estilos GENERALES */
+        .footer-column h4 {
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles */
+        }
+
+        /* Establece estilos para el título h4Centrado dentro  */
+        .footer-column .h4Color {
+            display: flex;
+            /*hacemos flexible la caja para poder utilizar las propiedades flex*/
+            justify-content: center;
+            /*centramos el contenido de la caja h4*/
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles PARA ESTA CAJA!!! */
+            color: #43043c;
+        }
+
+
+        /* Establece estilos para el formulario dentro de las columnas del footer */
+        .footer-column form {
+            margin-top: 40px;
+            display: flex;
+            /* Activa el modelo de caja flexible para el formulario */
+        }
+
+        /* Establece estilos para el campo de entrada de texto en el formulario */
+        .footer-column input[type="text"] {
+            width: 70%;
+            /* Establece el ancho del campo de entrada en un 70% del contenedor */
+            padding: 5px;
+            /* Agrega un relleno de 5 píxeles */
+        }
+
+        /* Establece estilos para el botón en el formulario */
+        .footer-column button {
+            width: 40%;
+            /* Establece el ancho del botón en un 100% del contenedor */
+            background-color: #9b059d;
+            /* Establece el color de fondo del botón */
+            color: #fff;
+            /* Establece el color del texto en blanco */
+            border: none;
+            /* Elimina el borde */
+            padding: 10px;
+            /* Agrega un relleno de 10 píxeles */
+            cursor: pointer;
+            /* Cambia el cursor al puntero al pasar el mouse */
+            transition: background-color 1s;
+            /* Agrega una transición suave del color de fondo durante 0.4 segundos */
+        }
+
+        /* Establece estilos para el botón en el formulario cuando se les aplica el estado "hover" (se pasa el mouse sobre él) */
+        .footer-column button:hover {
+            background-color: #cf00d6;
+            /* Cambia el color de fondo del botón al pasar el mouse */
+        }
+
+        /* Establece estilos para las citas en el footer */
+        .footer-colum.quotes {
+            flex: 1;
+            /* Permite que las citas crezcan y ocupen espacio igualmente */
+            display: flex;
+            /* Activa el modelo de caja flexible para elementos con clase "quotes" en el footer */
+            flex-direction: row;
+            /* Establece una dirección de fila para los elementos hijos de las citas */
+            margin-top: 5px;
+            /* Agrega un margen superior de 5 píxeles */
+        }
+
+        /* Establece estilos para las citas (blockquote) en el footer */
+        blockquote {
+
+
+            /* Permite que los elementos hijos se envuelvan cuando no quepan en una línea */
+            font-style: italic;
+            /* Establece el estilo de fuente en cursiva */
+            margin: 0px;
+            /* Elimina el margen predeterminado */
+            padding: 0px;
+            /* Elimina el relleno predeterminado */
+            /* Agrega un margen inferior de 10 píxeles */
+        }
+
+        /* Establece estilos para los párrafos (p) dentro de las citas en el footer */
+        .quotes blockquote p {
+            margin-left: 12px;
+            /* Agrega un margen izquierdo de 12 píxeles */
+            font-size: 12px;
+            /* Establece el tamaño de fuente en 12 píxeles */
+            margin-top: 15px;
+            /* Agrega un margen superior de 15 píxeles */
+            /* Elimina el margen predeterminado de los párrafos */
+        }
+
+        .quotes blockquote p span {
+            color: #75007d;
+            /* Establece el color del texto en un tono específico (#75007d) */
+            /* Elimina el margen predeterminado de los párrafos */
+        }
+
+        .footer-column .quotes blockquote p span.copyright {
+            /* Permite que los elementos de clase "copyright" crezcan y ocupen espacio igualmente */
+            margin-left: 25px;
+            /* Agrega un margen izquierdo de 20 píxeles */
+            font-size: 18px;
+            /* Establece el tamaño de fuente en 18 píxeles */
+            color: #f3ddf5;
+            /* Establece el color del texto en un tono específico (#f3ddf5) */
+            /* Elimina el margen predeterminado de los párrafos */
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="footer-column quotes">
+            <!-- Columna del pie de página para suscripción -->
+            <h4 class="h4Color">¡Suscríbete a nuestro boletín!</h4>
+            <form class="footer-form" action="#" method="post">
+                <input type="text" name="email" placeholder="Tu dirección de correo" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+            <div class="footer-column quotes">
+                <!-- Sección de citas en el pie de página -->
+                <blockquote>
+                    <p>"El éxito no es la clave de la felicidad, es justo 
+                        <span class="color"> al revés</span>."
+                        <span class="copyright">&nbsp;&nbsp;&nbsp;©</span>
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
