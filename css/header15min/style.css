@@ -48,3 +48,7 @@ nav{
     color: black;
     font-family:  'Cascadia Code';
 }
+.nav-links a:hover{
+	color:aqua;
+	text-shadow: 0 0 3px aquamarine, 0 0 5px #ffffff;
+}
