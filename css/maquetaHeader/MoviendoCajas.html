@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            /*color para distinguir la caja*/
+            background-color: lightgray;
+            /*quitamos el margen con la caja html*/
+            /*normalmente no se configura*/
+            margin: 0px;
+            /*garantizamos que el contenedor del cuerpo ocupe el 100 de la venta al cargar*/
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            /*flex-direction:row VALOR POR DEFECTO, por eso no lo especificamos*/
+            /*especificamos la altura mientras rellenamos con el contenido, pero no es necesario definir medidas, el conteindo y el padding y margin serán suficientes*/
+            min-height: 100px;
+            /*damos un color para distinguir la caja*/
+            background-color: white;
+            /*aplicamos margen con la caja contenedora para poder distinguir la caja exterior*/
+            padding: 10px;
+        }
+
+       
+        
+        header .caja2 {
+            flex-grow: 1;
+            background-color: lightsalmon;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        header .caja2 h2{
+            width: 100%;
+        }
+
+        header .caja3 {
+            min-width: 200px;
+            background-color: green;
+        }
+
+        main {
+            /*hacemos flex esta caja porque porque vamos a meter mas cosas dentro, al menos en principio*/
+            display: flex;
+            /*vamos a apilar el contenido en esta caja*/
+            flex-direction: column;
+            /*color para la caja*/
+            background-color: rgb(151, 165, 164);
+            /*hacemos que crezca según el contenido*/
+            flex-grow: 1;
+            /*lo quitaremos según metamos el contenido ya que el flex grow hara que los elementos se vayan colocando*/
+            min-height: 110vh;
+        }
+
+        main .contenedor {
+            margin: 5px;
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(234, 168, 168);
+
+        }
+
+        main .cajaMain1 {
+            display: flex;
+            margin: 5px;
+            min-height: 50px;
+            min-width: 50px;
+            background-color: lightblue;
+            flex-grow: 1;
+        }
+
+        main .contenedorDoble {
+
+            display: flex;
+            flex-direction: row;
+            /*por defecto*/
+            flex-wrap: wrap;
+            margin: 5px;
+            background-color: rgb(178, 115, 32);
+            justify-content: space-evenly;
+        }
+
+        main .cajaMain2 {
+            display: flex;
+            margin: 5px;
+            height: 350px;
+            width: 650px;
+            background-color: lightblue;
+        }
+
+
+        main .contenedorGrande {
+            display: flex;
+            flex-direction: row;
+            /*por defecto*/
+            flex-wrap: wrap;
+            margin: 5px;
+            background-color: rgb(217, 153, 180);
+            justify-content: space-evenly;
+        }
+
+        main .cajaMain3 {
+            display: flex;
+            margin: 5px;
+            height: 350px;
+            width: 1250px;
+            background-color: rgb(171, 250, 102);
+        }
+
+        footer {
+            /*hacemos flex esta caja porque porque vamos a meter mas cosas dentro, al menos en principio*/
+            display: flex;
+            /*vamos a apilar el contenido en esta caja*/
+            flex-direction: row;
+            /*color para la caja*/
+            background-color: rgb(97, 239, 255);
+            /*hacemos que crezca según el contenido*/
+            flex-grow: 1;
+            /*lo quitaremos según metamos el contenido*/
+            min-height: 20vh;
+
+        }
+    </style>
+
+
+    <header>
+        <div class="caja1">
+            <div class="imagen"></div>
+        </div>
+        <div class="caja2">
+            <h2>Fondo</h2>
+            <p>El parrafo</p>
+            <span>parrafo span</span>
+        </div>
+        <div class="caja3">
+            <h2>Hola</h2>
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+    
+            
+        </div>
+        <div class="contenedor">
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+            <div class="cajaMain1"></div>
+            
+        </div>
+
+        <div class="contenedorDoble">
+            <div class="cajaMain2"></div>
+            <div class="cajaMain2"></div>
+        </div>
+
+        <div class="contenedorGrande">
+            <div class="cajaMain3"></div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
