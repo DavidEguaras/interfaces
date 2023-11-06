@@ -2,20 +2,24 @@
 .menu{
     list-style: none;
     display: flex;
-    background-color: red;
+    background-color: gray;
     justify-content: space-evenly;
     padding: 20px;
+    font-family: 'Cascadia Code';
 }
 
 
 .opcion{
     text-decoration: none;
     padding: 10px;
-    background-color: darkred;
+    background-color: plum;
+    color: blueviolet;
+    border-radius: 5%;
+
 }
 .opcion a{
     text-decoration: none;
-    color:black
+    color: blueviolet;
 }
 
 .subMenu{
@@ -23,10 +27,10 @@
     border: 1px solid black;
     visibility: hidden;
     list-style: none;
-    padding: 0px; /*espacio donde es encuentran contenidas las subopciones */
+    padding: 10px; /*espacio donde es encuentran contenidas las subopciones */
     background-color: gray;
 }
 
 .opcion:hover .subMenu{
-    display: block;
+    visibility: visible;
 }
