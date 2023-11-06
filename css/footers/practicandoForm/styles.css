@@ -15,20 +15,27 @@ body{
     border-radius: 5px;
     padding: 50px;
 }
-
 .contenedor h3{
     text-align:center;
     font-size: 18px;
+    padding-bottom: 5px;
 }
 .contenedor span{
     color:blueviolet
+}
+.contenedor p{
+    font-size: 12px;
+    font-style: italic;
+}
+.contenedor i{
+    margin-left:1px ;
 }
 
 form{
     display: flex;
     padding: 10px;
-
 }
+
 
 input{
     margin: 0;
@@ -49,7 +56,6 @@ input[type=text]:focus {
     border: none;
     outline:none;
 }
-
 
 input[type=button]{
     width: 30%;

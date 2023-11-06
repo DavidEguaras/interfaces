@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+   /* Estilos generales para el menú */
+/* Estilos generales para el menú */
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Hacer el menú en línea (horizontal) */
+}
+
+.menu-item {   
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para el submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #f5f5f5;
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    flex-direction: column; /* Hacer el submenu en bloque (vertical) */
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu-item {
+    padding: 10px;    
+}
+
+
+</style>
+
+<body>
+    <ul class="menu">
+        <li class="menu-item">Opcion 1
+            <ul class="submenu">
+                <li class="submenu-item">SubOpcion 1</li>
+                <li class="submenu-item">SubOpcion 2</li>
+            </ul>
+        </li>
+        <li class="menu-item">Opcion 2</li>
+        <li class="menu-item">Opcion 3</li>
+    </ul>
+
+</body>
+
+</html>

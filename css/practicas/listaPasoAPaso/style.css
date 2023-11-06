@@ -1,0 +1,32 @@
+
+.menu{
+    list-style: none;
+    display: flex;
+    background-color: red;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+
+.opcion{
+    text-decoration: none;
+    padding: 10px;
+    background-color: darkred;
+}
+.opcion a{
+    text-decoration: none;
+    color:black
+}
+
+.subMenu{
+    position: relative;
+    border: 1px solid black;
+    visibility: hidden;
+    list-style: none;
+    padding: 0px; /*espacio donde es encuentran contenidas las subopciones */
+    background-color: gray;
+}
+
+.opcion:hover .subMenu{
+    display: block;
+}

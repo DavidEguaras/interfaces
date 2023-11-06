@@ -1,0 +1,12 @@
+/* 6.	"Crea un diseño de tarjetas flexibles que se ajusten automáticamente al tamaño del contenedor sin desbordarlo." */
+
+.contenedor {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos del contenedor */
+}
+
+.elemento {
+    flex: 1; /* Propiedad que encarga de los elementos se ajusten al tamaño del contenedor sin desbordarle*/
+    padding: 10px; /* Añade espacio interno para el contenido */
+    margin: 5px; /* Agrega un margen entre los elementos */
+}

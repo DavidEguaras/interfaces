@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+/*COMENTA Y DESCOMENTA LAS PROPIEDADES QUE HAY POR DEBAJO DE LA PROPIEDAD PADDING, PARA QUE VEAS COMO OBTENEMOS DIFERENTES TIPOS DE CAJA1*/
+    .caja1{
+        display:flex;        
+        background-color: blue;
+        flex-direction: column;
+        padding:0px;
+        /*Si queremos que el contenedor caja 1 crezca cuando p2 crezca en contenido*/
+        /*height: 100%;*/
+        /*Si queremos que el contenedor caja1 tenga el 100% del alto de la ventana, pero de forma inicial, no crece cuando .p2 crece, con lo que ocurre desbordamiento*/
+        height: 100vh;
+        /*si usamos esta medida, tendríamos que utilizar las propiedades de overflow*/
+        overflow: auto;       
+    }
+    /*TAMBIEN HAY QUE MIRAR ALGUNOS COMPORTAMIENTOS DE LA CAJA SEGUN EL CONTENIDO QUE TENGA, LE QUITAMOS O LE PONEMOS PARA QUE VEAMOS COMO QUEDA CUANDO, POR EJEMPLO
+        TIENE MUY POCO
+        TIENE ALGO, PERO MENOS QUE EL ALTO DEL NAVEGADOR
+        TIENE MAS QUE EL ALTO DEL NAVEGADOR*/
+
+    .p1{
+        background-color: red;
+    }
+
+    .p2{
+        background-color: green;
+        flex: 1;
+    }
+    
+    .p3{
+        background-color: red;
+    }
+</style>
+
+
+<body>
+    <div class="caja1">
+        <p class="p1">p</p>
+        <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi dolor labore alias iste unde voluptate adipisci aliquam totam cupiditate a sapiente nihil, ut ipsam ipsum quod velit voluptates necessitatibus!
+            
+        </p>
+        <p class="p3">p</p>
+    </div>
+</body>
+
+</html>
