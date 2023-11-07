@@ -1,11 +1,14 @@
 
 
 
-a{
-    padding: 10px;
-    background-color: black;
-    border-radius: 50%;
+
+footer{
+    display: flex;
+    flex-direction: row;
 }
+
+
+
 
 .social-icons{
     width: 300px;
@@ -17,6 +20,11 @@ a{
 }
 .social-icons li{
     padding: 10px;
+}
+.social-icons a{
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
 }
 .social-icons i{
     color: aqua;
