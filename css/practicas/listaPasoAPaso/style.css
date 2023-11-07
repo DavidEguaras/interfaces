@@ -1,36 +1,62 @@
 
-.menu{
+body{
+    background-color: gray;
+}
+.menu {
     list-style: none;
     display: flex;
-    background-color: gray;
+    background-color: black;
     justify-content: space-evenly;
     padding: 20px;
     font-family: 'Cascadia Code';
+    /* linea aqua en la parte de abajo */
+    -webkit-box-shadow: 0px 8px 0px 0px #33FFF3; 
+    box-shadow: 0px 8px 0px 0px #33FFF3;
 }
 
+.opcion {
+    position: relative;
+}
 
-.opcion{
+.opcion a {
     text-decoration: none;
     padding: 10px;
-    background-color: plum;
-    color: blueviolet;
-    border-radius: 5%;
-
+    background-color: rgb(41, 167, 172);
+    color: black;
+    border-radius: 7%;
+    text-align: center;
+    display: block; /* importante */
 }
-.opcion a{
-    text-decoration: none;
-    color: blueviolet;
+.opcion a:hover {
+    transition: 0.4s ease;
+    color: #FFFFFF;
+    background: #000000;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px aqua, 0 0 30px aqua, 0 0 40px aqua, 0 0 55px aqua, 0 0 75px aqua;
+}
+.opcion:hover .subMenu {
+    visibility: visible;
 }
 
-.subMenu{
-    position: relative;
+.subMenu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    /* right: 0%; */
+    padding: 10px;
     border: 1px solid black;
     visibility: hidden;
     list-style: none;
-    padding: 10px; /*espacio donde es encuentran contenidas las subopciones */
-    background-color: gray;
+    background-color: black;
+    text-shadow: aqua;  
+    -webkit-box-shadow: 13px 13px 15px 5px #42FFF4; 
+    box-shadow: 13px 13px 15px 5px #42FFF4;
 }
+.subMenu:hover {
 
-.opcion:hover .subMenu{
-    visibility: visible;
+}
+.subMenu a{
+    border-radius: 0%;
+}
+.subMenu a:hover {
+    color: aqua;
 }

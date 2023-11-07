@@ -1,0 +1,23 @@
+
+
+
+a{
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.social-icons{
+    width: 300px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons li{
+    padding: 10px;
+}
+.social-icons i{
+    color: aqua;
+}
