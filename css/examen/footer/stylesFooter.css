@@ -1,0 +1,190 @@
+/* Estilos para el footer */
+footer {
+    display: flex; /* Hace que el footer sea un contenedor flexible */
+    color: #fff; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    flex-wrap: wrap; /* Envuelve el contenido si se reduce el espacio */
+    justify-content: space-between; /* Distribuye el espacio entre las columnas */
+    border-top: 4px solid rgb(235, 193, 55); /* Borde superior */
+    background: linear-gradient(to left, #000, #777); /* Fondo degradado */
+    font-family: 'Cascadia Code'; /* Tipo de fuente */
+}
+
+/* Estilos para las columnas dentro del footer */
+.footer-column {
+    text-align: left; /* Alineación del texto */
+}
+
+/* Estilos generales para títulos h4 dentro de las columnas */
+.footer-column h4 {
+    font-size: 18px; /* Tamaño del texto */
+    color: rgb(227, 185, 47); /* Color del texto */
+}
+
+/* Estilos para un título h4 centrado */
+.footer-column .h4Color {
+    display: flex; /* Contenedor flexible */
+    justify-content: center; /* Centra el contenido */
+    color: rgb(227, 185, 47); /* Color del texto */
+}
+
+/* Otros estilos para un título h4 centrado */
+.h4Centrado {
+    display: flex; /* Contenedor flexible */
+    justify-content: center; /* Centra el contenido */
+    font-size: 18px; /* Tamaño del texto */
+}
+
+/* Estilos para íconos dentro de las columnas */
+.footer-column i {
+    margin-right: 10px; /* Margen derecho */
+    color: rgb(227, 185, 47); /* Color del icono */
+}
+
+/* Estilos para párrafos dentro de las columnas */
+.footer-column p {
+    font-size: 14px; /* Tamaño del texto */
+}
+
+/* Estilos para enlaces dentro de las columnas */
+.footer-column a {
+    text-decoration: none; /* Sin decoración */
+    font-size: 14px; /* Tamaño del texto */
+    flex-grow: 1; /* Crece para ocupar espacio disponible */
+    padding: 6px; /* Relleno */
+    color: white; /* Color del texto */
+    transition: color 0.4s; /* Transición suave del color */
+    margin: 4px; /* Margen */
+}
+
+/* Estilos para enlaces cuando se pasa el mouse sobre ellos */
+.footer-column a:hover {
+    color: rgb(227, 185, 47); /* Cambia el color del texto */
+}
+
+/* Estilos para íconos dentro de enlaces cuando se pasa el mouse */
+.footer-column a:hover i {
+    color: white; /* Cambia el color del icono */
+}
+
+/* Estilos para listas no ordenadas dentro de las columnas */
+.footer-column ul {
+    list-style: none; /* Sin viñetas */
+    margin-left: 0px; /* Sin margen a la izquierda */
+    padding: 0px; /* Sin relleno */
+}
+
+/* Estilos para elementos de lista en la lista de iconos de redes sociales */
+.social-icons li {
+    margin-right: 10px; /* Margen derecho */
+}
+
+/* Estilos para la lista de iconos de redes sociales */
+.social-icons {
+    display: flex; /* Contenedor flexible */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin relleno */
+    justify-content: flex-start; /* Alinea al inicio */
+}
+
+/* Estilos para enlaces en la lista de iconos de redes sociales */
+.social-icons a {
+    text-decoration: none; /* Sin decoración */
+    color: #fff; /* Color del texto */
+    font-size: 24px; /* Tamaño del texto */
+    display: block; /* Muestra como bloque en línea */
+    background: rgb(227, 185, 47); /* Fondo */
+    width: 40px; /* Ancho */
+    height: 40px; /* Altura */
+    border-radius: 50%; /* Bordes redondeados */
+    transition: background 0.4s; /* Transición suave del fondo */
+}
+
+/* Estilos para enlaces en la lista de iconos de redes sociales cuando se pasa el mouse */
+/* Aqui no se puede cambiar el color del icono, se cambia el de la caja que lo contiene */
+.footer-column .social-icons a:hover {
+    background: black; /* Cambia el fondo */
+}
+.footer-column .social-icons a:hover i{
+    color: rgb(227, 185, 47); /* Cambia el fondo */
+}
+/* Estilos para íconos dentro de enlaces en la lista de iconos de redes sociales */
+.social-icons i {
+    font-size: 30px; /* Tamaño del ícono */
+    margin-left: 6px; /* Margen izquierdo */
+    margin-top: 6px; /* Margen superior */
+    color: white; /* Color del ícono */
+}
+
+/* Estilos para íconos dentro de enlaces en la lista de iconos de redes sociales cuando se pasa el mouse */
+.social-icons i:hover {
+    font-size: 30px; /* Mantiene el tamaño del ícono */
+    color: white; /* Cambia el color del ícono */
+}
+
+/* Estilos para formularios dentro de las columnas del footer */
+.footer-column form {
+    margin-top: 40px; /* Margen superior */
+    display: flex; /* Contenedor flexible */
+    height: 30%;
+}
+
+/* Estilos para campos de entrada de texto en formularios */
+.footer-column input[type="text"] {
+    margin-left: 5%;
+    width: 55%; /* Ancho */
+    padding: 5px; /* Relleno */
+    font-family: 'Cascadia Code'; /* Tipo de fuente */
+}
+/* Estilos para botones en formularios */
+.footer-column button {
+    width: 40%; /* Ancho */
+    background-color: rgb(227, 185, 47); /* Fondo */
+    color: black; /* Color del texto */
+    font-weight: bold;
+    border: none; /* Sin borde */
+    padding: 10px; /* Relleno */
+    cursor: pointer; /* Cursor */
+    transition: background-color 0.8s; /* Transición suave del fondo */
+    font-family: 'Cascadia Code'; /* Tipo de fuente */
+    font-size: 16px;
+}
+
+/* Estilos para botones en formularios cuando se pasa el mouse sobre ellos */
+.footer-column button:hover {
+    background-color: black; /* Cambia el fondo */
+    color:rgb(227, 185, 47);
+}
+
+/* Estilos para citas en el footer */
+.footer-column.quotes {
+    flex: 1; /* Crecimiento flexible */
+    display: flex; /* Contenedor flexible */
+    margin-top: 5px; /* Margen superior */
+}
+
+/* Estilos para citas (blockquote) en el footer */
+blockquote {
+    font-style: italic; /* Estilo de fuente */
+    margin: 0px; /* Sin margen */
+    padding: 0px; /* Sin relleno */
+}
+
+/* Estilos para párrafos (p) dentro de citas en el footer */
+blockquote p {
+    margin-left: 12px; /* Margen izquierdo */
+    font-size: 12px; /* Tamaño del texto */
+    margin-top: 15px; /* Margen superior */
+}
+
+/* Estilos para un span dentro de párrafos en citas en el footer */
+blockquote p span {
+    color:rgb(227, 185, 47);
+}
+
+/* Estilos para un span con clase "copyright" dentro de párrafos en citas en el footer */
+.footer-column blockquote p span.copyright {
+    margin-left: 25px; /* Margen izquierdo */
+    font-size: 18px; /* Tamaño del texto */
+    color: #f3ddf5; /* Color del texto */
+}

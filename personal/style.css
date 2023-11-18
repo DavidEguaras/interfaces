@@ -5,6 +5,7 @@ body {
     background-image: url('fondo.jpg'); /* Ruta de tu imagen */
     background-size: cover; /* La imagen se ajusta al tamaño de la ventana de visualización manteniendo su relación de aspecto */
     background-position: center; /* Centra la imagen en la ventana de visualización */
+	font-family: 'Cascadia Code';
 }
 
 *{
@@ -30,7 +31,7 @@ nav{
 }
 
 .logo p{
-	color:#0ae5e1  ;
+	color: #e5c80a  ;
 	text-transform: lowercase;
 }
 
@@ -48,17 +49,18 @@ nav{
 .nav-links a{
 	text-decoration: none;
 	letter-spacing: 2px;
-	font-weight: 200;
+	font-family: 'Cascadia Code';
 	font-size: 17px;
 }
 .numbers{
-	color:#0ae5e1;
+	color:#e5c80a;
 }
 .links{
 	color:#ffffff;
 }
 .links:hover{
-	color: #0ae5e1;
+	text-shadow: 0 0 5px #FFF, 0 0 20px #e5c80a, 0 0 30px #e5c80a, 
+	0 0 40px #e5c80a, 0 0 55px #e5c80a, 0 0 75px #e5c80a;
 }
 
 
@@ -69,12 +71,12 @@ nav{
 .burger div{
 	width: 25px;
 	height: 3px;
-	background-color:#0ae5e1 ;
+	background-color: #e5c80a ;
 	margin: 5px;
 	transition:all 0.4s ease;
 }
 .burger div:hover{
-	background-color: #0ae5e1;
+	background-color: #e5c80a;
 }
 
 @media screen and (max-width: 1024px){
