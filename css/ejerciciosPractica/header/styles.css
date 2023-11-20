@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: gray;
+}
+
+a, li{
+    font-family: 'M PLUS 1 Code', monospace;
+    font-size: 17px;
+    font-weight: 500px;
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px 1%;
+    background-color: black;
+}
+.caja1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px ;
+    border: 1px solid plum;
+    margin-bottom: 1%;
+}
+.caja2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px ;
+    border: 1px solid plum;
+}
+.subcaja1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px ;
+    border: 1px solid plum;
+}
+.logo{
+    cursor: pointer;
+    width:100px; /* La imagen ocupa el 100% del ancho de su contenedor */
+    background-color: plum;
+    height: 30px;
+}
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: plum;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  border-radius: 0px;
+}
+
+form.example button:hover {
+  background: plum;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+/* ---------------------NAV LINKS--------------------- */
+.nav-links{
+    list-style: none;
+    
+   
+}
+.nav-links li{
+    display: inline-block;
+    padding: 5px 20px;
+    
+}
+.nav-links li a{
+    padding: 10px 0px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+    background-color: plum;
+    color: black;
+}
+/* ---------------------NAV LINKS--------------------- */
+
+
+button{
+    padding: 9px 25px;
+    background-color: plum;
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(109, 20, 101, 1.6);
+}

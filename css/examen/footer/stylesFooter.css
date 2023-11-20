@@ -1,5 +1,15 @@
 /* Estilos para el footer */
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 footer {
+    /*----Fijan el footer abajo----*/
+    position: relative;
+    margin-top: auto;
+    /*----Fijan el footer abajo----*/
     display: flex; /* Hace que el footer sea un contenedor flexible */
     color: #fff; /* Color del texto */
     padding: 20px; /* Espaciado interno */
@@ -19,6 +29,7 @@ footer {
 .footer-column h4 {
     font-size: 18px; /* Tamaño del texto */
     color: rgb(227, 185, 47); /* Color del texto */
+    margin-bottom: 0px;
 }
 
 /* Estilos para un título h4 centrado */

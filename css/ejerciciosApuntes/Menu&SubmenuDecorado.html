@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            color: white;
+            background-color: lightgrey;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+        }
+
+        .menu {
+            margin-top: 0px;
+            background-color: black;
+            display: flex;
+            list-style: none;
+        }
+
+
+        .opcion {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            margin-right: 2px;
+            margin-left: 2px;
+        }
+
+        .link-opcion {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: white;
+            border: 2px dashed black;
+            transition: 0.4s
+        }
+
+        .icono-opcion {
+            color: red;
+            margin-right: 6px
+        }
+
+        .opcion:hover .submenu {
+            display: block;
+        }
+
+        .opcion:hover .link-opcion {
+            border: 2px dashed azure;
+            color: orangered
+        }
+
+        .opcion:hover .icono-opcion {
+            color: orange
+        }
+
+        .submenu {
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+            top: 53px;
+            left: 0px;
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: azure;
+            border: 2px solid rgb(179, 255, 255);
+            opacity: 0.6;
+            min-width: max-content;
+        }
+
+        .subopcion {
+            display: flex;
+            margin-left: 13px;
+            margin-right: 11px;
+            opacity: 1;
+        }
+
+        .link-subopcion {
+            padding: 0px;
+            padding: 6.5px;
+            transition: 0.8s
+        }
+
+        .icono-subopcion {
+            color: violet;
+            margin-right: 5px
+        }
+
+        .subopcion:hover .icono-subopcion {
+            color: rgb(70, 46, 129)
+        }
+
+        .subopcion:hover .link-subopcion {
+            color: violet;
+        }
+    </style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">Integrantes de la ClaustroEjemplo</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
+<mso:SharedWithUsers msdt:dt="string">7;#Integrantes de la ClaustroEjemplo</mso:SharedWithUsers>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li class="opcion">
+            <a href="" class="link-opcion">
+                <i class="fas fa-plane icono-opcion"></i>Opcion 1
+            </a>
+        </li>
+        <li class="opcion"><a href="" class="link-opcion"><i class="fas fa-plane icono-opcion"></i>Opcion 2</a>
+            <ul class="submenu">
+                <li class="subopcion">
+                    <a href="" class="link-subopcion">
+                        <i class="fas fa-plane icono-subopcion"></i>SubOpcion 1
+                    </a>
+                </li>
+                <li class="subopcion">
+                    <a href="" class="link-subopcion">
+                        <i class="fas fa-plane icono-subopcion"></i>SubOpcion 1
+                    </a>
+                </li>
+                <li class="subopcion">
+                    <a href="" class="link-subopcion">
+                        <i class="fas fa-plane icono-subopcion"></i>SubOpcion 1
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="opcion">
+            <a href="" class="link-opcion">
+                <i class="fas fa-plane icono-opcion"></i>Opcion 1
+            </a>
+        </li>    
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    color: #fff;
+    padding: 20px;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    border-top: 4px solid rgb(235, 193, 55);
+    background: linear-gradient(to left, #000, #777);
+    font-family: 'Cascadia Code';
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    color: rgb(227, 185, 47);
+}
+
+.footer-column .h4Color {
+    display: flex;
+    justify-content: center;
+    color: rgb(227, 185, 47);
+}
+
+.h4Centrado {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.footer-column i {
+    margin-right: 10px;
+    color: rgb(227, 185, 47);
+}
+
+.footer-column p {
+    font-size: 14px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    font-size: 14px;
+    flex-grow: 1;
+    padding: 6px;
+    color: white;
+    transition: color 0.4s;
+    margin: 4px;
+}
+
+.footer-column a:hover {
+    color: rgb(227, 185, 47);
+}
+
+.footer-column a:hover i {
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    background: rgb(227, 185, 47);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background 0.4s;
+}
+
+.footer-column .social-icons a:hover {
+    background: black;
+}
+
+.footer-column .social-icons a:hover i {
+    color: rgb(227, 185, 47);
+}
+
+.social-icons i {
+    font-size: 30px;
+    margin-left: 6px;
+    margin-top: 6px;
+    color: white;
+}
+
+.social-icons i:hover {
+    font-size: 30px;
+    color: white;
+}
+
+.footer-column form {
+    margin-top: 40px;
+    display: flex;
+    height: 30%;
+}
+
+.footer-column input[type="text"] {
+    margin-left: 5%;
+    width: 55%;
+    padding: 5px;
+    font-family: 'Cascadia Code';
+}
+
+.footer-column button {
+    width: 40%;
+    background-color: rgb(227, 185, 47);
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+    font-family: 'Cascadia Code';
+    font-size: 16px;
+}
+
+.footer-column button:hover {
+    background-color: black;
+    color: rgb(227, 185, 47);
+}
+
+.footer-column.quotes {
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 0px;
+    padding: 0px;
+}
+
+blockquote p {
+    margin-left: 12px;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+blockquote p span {
+    color: rgb(227, 185, 47);
+}
+
+.footer-column blockquote p span.copyright {
+    margin-left: 25px;
+    font-size: 18px;
+    color: #f3ddf5;
+}
