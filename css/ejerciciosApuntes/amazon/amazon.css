@@ -1,0 +1,198 @@
+html{
+    background-color: lightgray;
+}
+
+header{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    min-height: 10vh;
+    border-bottom: 4px solid purple;
+    background-color: black;
+}
+
+main{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    background-color: lightgray;
+}
+
+.seccion1{
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh;
+    background-color: white;
+    margin-top: 5px;
+    padding: 2px;
+    box-shadow: 0px 1px 10px -1px rgba(0,0,0,0.5);
+}
+
+.fig-img-principal{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 700px;
+    /*marcamos relative, porque vamos a referenciar algo en referencia a esta caja*/
+    position: relative;
+}
+
+.gradiente {
+    position: absolute;
+    /*cuando el desplazamiento es absoluto desplaza...*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.01) 100%);
+    z-index: 2;
+}
+
+.img-principal{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 700px;
+    z-index: 1;
+}
+
+.fig-imagen-principal::before {
+    /* Generamos un pseudo-elemento (::before) para insertar contenido adicional */
+    content: "";    
+    /* Establecemos la posición absoluta con respecto al contenedor padre (.fig-imagen-superior) */
+    position: absolute;    
+    /* Establecemos las propiedades para posicionar el elemento en cada borde del contenedor padre */
+    top: 0;    /* Desde la parte superior */
+    left: 0;   /* Desde la parte izquierda */
+    right: 0;  /* Hasta la parte derecha */
+}
+
+.contenedor-ofertas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* quitamos medidas porque se produce overflow al meter cajas*/
+    /*min-height: 10vh;
+    max-height: 10vh;*/
+    background-color: none;
+    justify-content: /*flex-start*/space-evenly;
+    margin-top: -400px;
+    z-index: 999;
+    padding-left: 5px;
+}
+
+.articulo-ofertas{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    min-height: 350px;
+    background-color: white;
+    margin: 5px;
+    padding: 15px;
+    box-shadow: 0px 1px 10px -1px rgba(0,0,0,0.5);
+}
+
+.articulo-ofertas .txt-articulo{
+    font-size: 22px;
+    margin: 0px;
+    margin-bottom: 15px;
+
+}
+
+.articulo-ofertas .img-articulo{
+    width: 300px;
+    height: 300px;
+}
+
+.articulo-ofertas .link-articulo{
+    text-decoration: none;
+    margin-top: 15px;
+    color: rgb(62, 187, 174);
+    font-size: 18px;
+}
+
+.link-articulo:hover p{
+    font-size: 19px;
+    color: darkorchid;
+}
+
+.seccion2{
+    display: flex;
+    flex-direction: row;
+    min-height: 10vh;
+    background-color: none;
+    margin-top: 5px;
+    padding: 2px;
+    box-shadow: 0px 1px 10px -1px rgba(0,0,0,0.5);
+
+}
+
+.articulo-ofertas-multiples{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 15px;
+    min-width: 310px;
+    min-height: 400px;
+    background-color: white;
+    box-shadow: 0px 1px 10px -1px rgba(0, 0, 0, 0.5);
+}
+
+.txt-ofertas-multiples{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 8px;
+}
+
+.contenedor-img-ofertas-multiples{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.link-oferta-multiple{
+    margin: 0px;
+    padding: 0px;
+}
+
+.fig-oferta-multiple{
+    margin: 0px;
+    padding: 0px;
+}
+
+.img-oferta-multiple{
+    margin: 0px;
+    padding: 0px;
+    width: 150px;
+    height: 120px;
+}
+
+.figcaption-oferta-multiple{
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    color: black;
+}
+
+.link-inf-oferta-multiple{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: rgb(62, 187, 174);
+}
+
+footer{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    min-height: 10vh;
+    border-top: 4px solid purple;
+    background-color: black;
+}
+

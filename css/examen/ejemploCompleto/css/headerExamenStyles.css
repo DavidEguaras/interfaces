@@ -1,0 +1,57 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    background-color: black;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: plum;
+    padding: 10px 20px; /* Añadido para crear espacio alrededor del enlace */
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: plum;
+    color: black;
+}
+
+/* Estilos del submenú */
+.submenu {
+    position: absolute;
+    top: 100%; /* Colocar el submenú debajo del elemento padre */
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Añadido para eliminar el margen predeterminado */
+    background-color: gray;
+    width: 200px; /* Ancho del submenú */
+    transition: opacity 0.3s ease; /* Agregando una transición para suavizar la visualización */
+}
+
+.submenu li {
+    position: relative; /* Asegurar la alineación de los elementos del submenú */
+}
+
+.submenu a {
+    color: white; /* Color del texto del submenú */
+    padding: 8px 15px; /* Añadido para crear espacio alrededor del enlace */
+    display: block;
+}
+
+.submenu a:hover {
+    background-color: black;
+}
+
+.menu .opcion:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+}

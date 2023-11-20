@@ -1,0 +1,146 @@
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    position: relative;
+    margin-top: auto;
+    justify-content: space-evenly;
+    padding:  10px 10px;
+    background: linear-gradient(to left, black, gray);
+}
+
+footer a, li, h4, p{
+    font-family: 'Cascadia Code';
+    list-style: none;
+    text-decoration: none;
+    transition: 0.4s;
+    color: white;
+}
+
+footer h4{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+
+/* -----------Estilos para FOOTER-COLUMN generales------------- */
+.footer-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 50px;
+}
+.footer-column ul{
+    padding: 10px;
+    margin-left: 0px; /* Sin margen a la izquierda */
+    padding: 0px; /* Sin relleno */
+}
+.footer-column a{
+    color: white;
+}
+.footer-column i{
+    color: plum;
+}
+.footer-column a:hover i{
+    color: white;
+}
+.footer-column a:hover {
+    color: plum;
+}
+.footer-column h4 {
+    color: plum;
+}
+/* -----------Estilos para FOOTER-COLUMN generales------------- */
+
+
+
+
+
+/* -----------Estilos para redes sociales------------- */
+
+.social-icons {
+    display: flex;
+    margin-top: 15px;
+    padding: 0;
+    justify-content: space-evenly;
+
+}
+
+
+/*Caja del icono*/
+.social-icons a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right:10px;
+    margin-left: 10px;
+    background: plum;
+}
+.social-icons i {
+    font-size: 30px; /* Tamaño del ícono */
+    margin-left: 10px; /* Margen izquierdo */
+    margin-top: 10px; /* Margen superior */
+    color: white; /* Color del ícono */
+}
+.social-icons a:hover i{
+    color: plum;
+}
+.social-icons a:hover{
+    background: white;
+}
+/* -----------Estilos para redes sociales------------- */
+
+
+
+
+
+/* -----------Estilos para FORM------------- */
+.footer-column .footer-form{
+    display: flex;
+    padding: 10px;
+}
+.h4Color{
+    margin-bottom: 10px;
+}
+.footer-column .footer-form input[type="text"]{
+    font-family: 'Cascadia Code';
+    width: 70%;
+    padding: 20px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    border: none;
+    outline: none;
+}
+.footer-column .footer-form button{
+    font-family: 'Cascadia Code';
+    width: 30%;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border: none;
+    background-color: plum;
+    transition: 0.4s;
+}
+.footer-column .footer-form button:hover{
+    background-color: purple;
+}
+
+/*cita*/
+.color{
+    color:plum;
+}
+blockquote p{
+    font-style: italic;
+    color: white;
+}
+/* -----------Estilos para FORM------------- */
+
+
+
