@@ -1,0 +1,30 @@
+main {
+    background-color: rgb(210, 210, 210);
+}
+
+.m-caja-seccion-1{
+    position:relative;
+    min-height: 20vh;  
+    background-color: white;
+}
+
+
+.gradiente {
+    position: absolute;
+    /*aplicar cuando este finalizado*/
+    /*top:30%*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgb(210, 210, 210) 0%, rgba(0, 0, 0, 0.01) 100%);
+    z-index: 2;
+}
+
+/*espacio para separar la primera sección de la segunda*/
+/*Si las secciones fueran distintas, lo haríamos de otra forma*/
+/*Así no tenemos que utilizar mas que una clase seccion 1 ya que no podemos utilizar
+  la propiedad margin top en ella, ya que la queremos pegada a la caja del menu*/
+.espacio{
+    height: 1vh;
+    background-color: rgb(210, 210, 210);   
+}

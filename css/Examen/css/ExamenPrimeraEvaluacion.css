@@ -1,0 +1,14 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(210, 210, 210);
+}
+
+a,li,h4{
+    font-family: 'Cascadia Code';
+    font-weight: 500px;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}

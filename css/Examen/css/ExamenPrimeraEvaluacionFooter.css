@@ -1,0 +1,136 @@
+
+footer {
+    position: relative;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    color: #fff;
+    padding: 20px;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    background: linear-gradient(to left, #000, #777);
+}
+
+
+/*=============COLUMNAS GENERALES===========*/
+.footer-column {
+    text-align: left;
+}
+.footer-column h4 {
+    font-size: 18px;
+    color: aqua;
+}
+
+.footer-column .h4Color {
+    display: flex;
+    justify-content: center;
+    color: aqua;
+}
+.h4Centrado {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+.footer-column i {
+    margin-right: 10px;
+    color: aqua;
+}
+.footer-column p {
+    font-size: 14px;
+}
+.footer-column a {
+    text-decoration: none;
+    font-size: 14px;
+    flex-grow: 1;
+    padding: 6px;
+    color: white;
+    transition: color 0.4s;
+    margin: 4px;
+}
+.footer-column a:hover {
+    color: aqua;
+}
+.footer-column a:hover i {
+    color: white;
+}
+.footer-column ul {
+    list-style: none;
+    margin-left: 0px;
+    padding: 0px;
+}
+/*=============COLUMNAS GENERALES===========*/
+
+
+
+/*============REDES SOCIALES=============*/
+
+.social-icons {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+}
+.social-icons li {
+    margin-right: 10px;
+}
+.social-icons i{
+    font-size: 25px;
+    color: black;
+    padding: 7px;
+    margin-left: 1.2px;
+}
+.social-icons a{
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    background: aqua;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background 0.4s;
+}
+.social-icons a:hover i{
+    color: aqua;
+}
+.social-icons a:hover{
+    background: black;
+
+}
+/*============REDES SOCIALES=============*/
+
+
+
+/*============FORM=============*/
+
+.footer-form{
+    display: flex;
+    
+}
+.footer-form input[type=text]{
+    width: 70%;
+    padding: 10px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+.footer-form button{
+    font-family: 'Cascadia Code';
+    width: 30%;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: aqua;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.footer-form button:hover{
+    font-family: 'Cascadia Code';
+    background-color: cadetblue;
+}
+
+
+/*============FORM=============*/

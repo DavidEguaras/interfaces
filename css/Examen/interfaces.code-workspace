@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../Asignaturas/Diseño de interfaces/interfaces"
+		},
+		{
+			"path": "../Examen Primera Evaluacion"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Examen Primera Evaluacion"
+	}
+}
