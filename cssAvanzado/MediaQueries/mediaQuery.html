@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos base para dispositivos móviles */
+        body {
+            background-color: red;
+        }
+
+        p:after {
+            color: white;
+            content: "Móvil";
+        }
+
+        /* Media query para tabletas */
+        @media (min-width: 600px) {
+            body {
+                background-color: green;
+            }
+            p:after {
+                color: white;
+                content: "Tablet";
+            }
+        }
+
+        /* Media query para desktop */
+        @media (min-width: 1024px) {
+            body {
+                background-color: blue;
+            }
+
+            p:after {
+                color: white;
+                content: "Escritorio";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+</body>
+
+</html>

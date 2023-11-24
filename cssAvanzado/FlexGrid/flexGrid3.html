@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+            row-gap: 10px;
+            
+        }
+
+        .grid-item {
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        /*En este ejemplo, hemos definido una cuadrícula con tres columnas
+         de igual tamaño utilizando la propiedad grid-template-columns.
+         Luego, hemos utilizado la propiedad column-gap para establecer un
+         espacio de 20 píxeles entre las columnas y la propiedad row-gap para
+         establecer un espacio de 10 píxeles entre las filas. También hemos 
+         agregado algunos elementos a la cuadrícula y les hemos dado un color 
+         de fondo y un relleno para que puedas ver el efecto del espacio entre
+         las columnas y las filas */
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+</body>
+
+</html>

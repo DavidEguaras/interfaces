@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider de Miniaturas</title>
+
+    <style>
+        
+/*ESTILOS MINIMOS*/
+        .slider {
+            max-width: 1330px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .miniaturas {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .miniatura {
+            max-width: 100px;
+            max-height: 100px;
+            margin: 5px;
+
+        }
+
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        .botonesSlider button{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .botonesSlider button:hover {
+            background-color: #555;
+        }
+
+      
+/*FIN ESTILOS MINIMOS*/
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="miniaturas">
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/30/beauty/BGE-DesktopGateway-379x304._SY304_CB574312755_.jpg"
+                    alt="">
+            </div>
+            <div class="miniatura"><img src="https://images-eu.ssl-images-amazon.com/images/G/30/beauty/BGE-DesktopGateway-379x304._SY304_CB574312755_.jpg"
+                alt=""><img src="logo.png" alt="">
+            </div>
+            <div class="miniatura"><img src="https://images-eu.ssl-images-amazon.com/images/G/30/beauty/BGE-DesktopGateway-379x304._SY304_CB574312755_.jpg"
+                alt=""><img src="logo.png" alt="">
+            </div>
+            <div class="miniatura"><img src="https://images-eu.ssl-images-amazon.com/images/G/30/beauty/BGE-DesktopGateway-379x304._SY304_CB574312755_.jpg"
+                alt=""><img src="logo.png" alt="">
+            </div>
+            <div class="miniatura"><img src="https://images-eu.ssl-images-amazon.com/images/G/30/beauty/BGE-DesktopGateway-379x304._SY304_CB574312755_.jpg"
+                alt=""><img src="logo.png" alt="">
+            </div>
+            <div class="miniatura"><img src="https://images-eu.ssl-images-amazon.com/images/G/30/beauty/BGE-DesktopGateway-379x304._SY304_CB574312755_.jpg"
+                alt=""><img src="logo.png" alt="">
+            </div>
+            <div class="miniatura"><img src="https://images-eu.ssl-images-amazon.com/images/G/30/beauty/BGE-DesktopGateway-379x304._SY304_CB574312755_.jpg"
+                alt=""><img src="logo.png" alt="">
+            </div>
+            <div class="miniatura"><img src="https://images-eu.ssl-images-amazon.com/images/G/30/beauty/BGE-DesktopGateway-379x304._SY304_CB574312755_.jpg"
+                alt=""><img src="logo.png" alt="">
+            </div>
+            
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+            <div class="miniatura"><img src="logo.png" alt=""></div>
+
+        </div>
+        
+        <div class="botonesSlider">
+            <button id="izquierda" onclick="moverMiniaturas(-4)">Izquierda</button>
+            <button id="derecha" onclick="moverMiniaturas(4)">Derecha</button>
+        </div>
+        
+
+    </div>
+
+
+   
+      
+
+
+
+    <script>
+        const miniaturasContainer = document.querySelector('.miniaturas');
+        const miniaturas = document.querySelectorAll('.miniatura');
+        const botonIzquierda = document.getElementById('izquierda');
+        const botonDerecha = document.getElementById('derecha');
+        const miniaturasPorVista = 4; // Cantidad de miniaturas a mostrar en cada paso
+        let vistaActual = 0;
+
+        function ajustarMiniaturas() {
+            const miniaturaVisible = 12;
+            const miniaturasTotales = miniaturas.length;
+
+            // Si hay menos de 12 miniaturas, no hay necesidad de hacer nada
+            if (miniaturasTotales <= miniaturaVisible) {
+                botonIzquierda.disabled = true;
+                botonDerecha.disabled = true;
+                return;
+            }
+
+            if (vistaActual < 0) {
+                vistaActual = 0;
+            }
+            if (vistaActual >= miniaturasTotales - miniaturaVisible) {
+                vistaActual = miniaturasTotales - miniaturaVisible;
+            }
+
+            mostrarVista();
+        }
+
+        function moverMiniaturas(pasos) {
+            vistaActual += pasos;
+            ajustarMiniaturas();
+        }
+
+
+        function mostrarVista() {
+            const desplazamiento = -vistaActual * (miniaturas[0].offsetWidth + 10); // 10 es el margen
+            miniaturasContainer.style.transform = `translateX(${desplazamiento}px)`;
+
+            botonIzquierda.disabled = vistaActual === 0;
+            botonDerecha.disabled = vistaActual >= miniaturas.length - miniaturasPorVista;
+        }
+
+        mostrarVista();
+    </script>
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Menú Responsive</title>
+    <style>
+        body {
+            font-family: 'Cascadia Code',  monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        .logo {
+            align-items: center;
+            margin-top: 0px;
+        }
+
+        .logo h1 {
+            margin-right: 10px;
+            color: plum;
+        }
+
+        .logo p {
+            color: white;
+            margin-bottom: 0; /* Eliminamos el margen predeterminado del párrafo */
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li{
+            margin-right: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            padding: 12px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover{
+            background-color: plum;
+            color:black
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .nav-links{
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                background-color: #333;
+                top: 60px;
+                left: 0;
+            }
+
+            .nav-links.show {
+                margin-top:5px;
+                padding:0;
+                display: flex;
+            }
+            .nav-links.hide {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                background-color: #333;
+                top: 60px;
+                left: 0;
+            }
+            .nav-links li {
+                display:flex;
+                justify-content: center;               
+                margin:10px 5px 10px 5px;
+                padding-bottom: 3px;
+                border-bottom: 1px solid #555;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: row;
+            }
+            .menu-toggle p{
+                font-family: 'Cascadia Code';
+                margin-right: 10px;
+               font-size: 20px;
+            }
+            .burger {
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Tu Logo</h1>
+            <p>Tu slogan</p>
+        </div>
+        
+        <div class="Menu-Servicios">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <p>Menu-Servicios</p>
+                <div class="burger">
+                    &#9776;
+                </div> 
+            </div>
+        </div>
+
+        <div class="Menu-Login">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <p>Menu-Login</p>
+                <div class="burger">
+                    &#9776;
+                </div> 
+            </div>
+        </div>    
+    </header>
+    <main>
+     <!-- Contenido de la página -->
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggleServicios = document.querySelector('.Menu-Servicios .menu-toggle');
+            const menuToggleLogin = document.querySelector('.Menu-Login .menu-toggle');
+            const navLinksServicios = document.querySelector('.Menu-Servicios .nav-links');
+            const navLinksLogin = document.querySelector('.Menu-Login .nav-links');
+
+            menuToggleServicios.addEventListener('click', function () {
+                navLinksServicios.classList.toggle('show');
+                navLinksLogin.classList.remove('show');
+                navLinksLogin.classList.togle('hide');
+            });
+
+            menuToggleLogin.addEventListener('click', function () {
+                navLinksLogin.classList.toggle('show');
+                navLinksServicios.classList.remove('show');
+                navLinksServicios.classList.toogle('hide');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

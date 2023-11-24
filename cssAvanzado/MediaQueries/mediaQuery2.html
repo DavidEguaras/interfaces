@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Estilos para pantallas menores de 600px */
+    @media (max-width: 599px) {
+      nav a {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
+    /* Estilos para pantallas de 600px a 1023px */
+    @media (min-width: 600px) and (max-width: 1023px) {
+      nav a {
+        float: none;
+        width: 50%;
+        box-sizing: border-box;
+      }
+    }
+
+    /* Estilos para pantallas de 1024px o más */
+    @media (min-width: 1024px) {
+      nav a {
+        float: left;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#home">Inicio</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#productos">Productos</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#acerca">Acerca de</a>
+  <a href="#equipo">Equipo</a>
+</nav>
+
+</body>
+</html>
