@@ -7,12 +7,15 @@ main {
     min-height: 20vh;  
     background-color: white;
 }
-
+.m-caja-seccion-1 img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    display: block; /* Asegura que la imagen se muestre como bloque */
+}
 
 .gradiente {
     position: absolute;
-    /*aplicar cuando este finalizado*/
-    /*top:30%*/
+    top:30%;
     left: 0;
     right: 0;
     bottom: 0;
