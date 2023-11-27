@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+        gap: 20px;
+    }
+
+    .grid-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+    }
+    
+   
+    .item1 { background-color: deepskyblue; }
+    .item2 { background-color: darkmagenta; }
+    .item3 { background-color: chocolate; }
+    .item4 { background-color: plum; }
+    .item5 { background-color: white; }
+    .item6 { background-color: brown; }
+    .item7 { background-color: aqua; }
+    .item8 { background-color: green; }
+    .item9 { background-color: blue; }
+</style>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>
+        <div class="grid-item item4">4</div>
+        <div class="grid-item item5">5</div>
+        <div class="grid-item item6">6</div>
+        <div class="grid-item item7">7</div>
+        <div class="grid-item item8">8</div>
+        <div class="grid-item item9">9</div>
+    </div>
+</body>
+</html>

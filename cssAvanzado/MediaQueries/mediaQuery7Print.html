@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Media Query para Impresión</title>
+  
+  <!-- Estilos generales para pantalla -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #336699;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  </style>
+
+  <!-- Estilos específicos para impresión -->
+  <style media="print">
+    body {
+      margin: 0;
+      padding: 10mm;
+    }
+
+    h1 {
+      color: #000; /* Cambiar color del título para impresión */
+    }
+
+    p {
+      font-size: 12pt; /* Cambiar tamaño de fuente para impresión */
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplo de Media Query para Impresión</h1>
+  <p>Esta es una página de ejemplo que muestra cómo utilizar media queries en CSS para estilos específicos de impresión.</p>
+  <p>¡Imprime esta página para ver los estilos específicos para impresión!</p>
+</body>
+</html>

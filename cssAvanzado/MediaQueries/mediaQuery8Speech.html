@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Media Query para Speech</title>
+  
+  <!-- Estilos generales para pantalla -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: green;
+    }
+
+    h1 {
+      color: #336699;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  </style>
+
+  <!-- Estilos específicos para speech -->
+  <style media="speech">
+    body {
+      background-color: red; /* Cambiar color de fondo para síntesis de voz */
+    }
+
+    h1 {
+      color: white; /* Cambiar color del título para síntesis de voz */
+    }
+
+    p {
+      font-size: 20pt; /* Cambiar tamaño de fuente para síntesis de voz */
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplo de Media Query para Speech</h1>
+  <p>Esta es una página de ejemplo que muestra cómo utilizar media queries en CSS para estilos específicos de síntesis de voz.</p>
+  <p>¡Prueba a utilizar un lector de pantalla para experimentar con los estilos de síntesis de voz!</p>
+</body>
+</html>
