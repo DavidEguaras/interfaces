@@ -1,0 +1,24 @@
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    background-color: plum;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Cascadia Code';
+    font-size: 18px;
+}
+label {
+    grid-column: 1 / 2;
+    text-align: center;
+}
+input[type="text"],
+input[type="email"]{
+    grid-column: 2 / 3;
+    padding: 5px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-family: 'Cascadia Code';
+    font-size: 18px;
+}

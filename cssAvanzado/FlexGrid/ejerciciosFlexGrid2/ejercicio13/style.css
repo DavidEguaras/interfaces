@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  nav a{
+    margin-right:20px;
+    text-decoration: none;
+    font-family: 'Cascadia Code';
+  }
+  .menu-icon{
+    display: none;
+  }
+  /* Estilos para el menú desplegable */
+@media screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav ul {
+      display: none;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav ul.active {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      order: 2;
+    }
+}

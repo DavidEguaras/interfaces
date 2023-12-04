@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tres Columnas</title>
+  <style>
+    /* Estilos para el diseño de tres columnas */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .column {
+      flex: 1;
+      margin: 0 10px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .column img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column">
+      <img src="imagen1.jpg" alt="Imagen 1">
+      <p>Texto de la columna 1.</p>
+    </div>
+    <div class="column">
+      <img src="imagen2.jpg" alt="Imagen 2">
+      <p>Texto de la columna 2.</p>
+    </div>
+    <div class="column">
+      <img src="imagen3.jpg" alt="Imagen 3">
+      <p>Texto de la columna 3.</p>
+    </div>
+  </div>
+</body>
+</html>
