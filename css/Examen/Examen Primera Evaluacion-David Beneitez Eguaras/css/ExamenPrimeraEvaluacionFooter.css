@@ -19,12 +19,13 @@ footer {
 }
 .footer-column h4 {
     font-size: 18px;
-    color: rgb(255, 200, 0);
+    color: aqua;
 }
+
 .footer-column .h4Color {
     display: flex;
     justify-content: center;
-    color: rgb(255, 200, 0);
+    color: aqua;
 }
 .h4Centrado {
     display: flex;
@@ -33,14 +34,14 @@ footer {
 }
 .footer-column i {
     margin-right: 10px;
-    color: rgb(255, 200, 0);
+    color: aqua;
 }
 .footer-column p {
     font-size: 14px;
 }
 .footer-column a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     padding: 6px;
     color: white;
@@ -48,7 +49,7 @@ footer {
     margin: 4px;
 }
 .footer-column a:hover {
-    color: rgb(255, 200, 0);
+    color: aqua;
 }
 .footer-column a:hover i {
     color: white;
@@ -83,14 +84,14 @@ footer {
     color: #fff;
     font-size: 20px;
     display: block;
-    background: rgb(255, 200, 0);
+    background: aqua;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     transition: background 0.4s;
 }
 .social-icons a:hover i{
-    color: rgb(255, 200, 0);
+    color: aqua;
 }
 .social-icons a:hover{
     background: black;
@@ -104,10 +105,9 @@ footer {
 
 .footer-form{
     display: flex;
+    
 }
 .footer-form input[type=text]{
-    font-size: 16px;
-    font-family: 'Cascadia Code';
     width: 70%;
     padding: 10px;
     border-bottom-left-radius: 25px;
@@ -115,12 +115,13 @@ footer {
     border: none;
     outline: none;
 }
+
 .footer-form button{
     font-family: 'Cascadia Code';
     width: 30%;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
-    background-color: rgb(255, 200, 0);
+    background-color: aqua;
     border: none;
     outline: none;
     cursor: pointer;
@@ -128,13 +129,8 @@ footer {
 }
 .footer-form button:hover{
     font-family: 'Cascadia Code';
-    background-color: rgb(56, 45, 7);
-    color: white;
+    background-color: cadetblue;
 }
-.footer-column-cita p{
-    padding: 10px;
-    font-size: 14px;
-    font-family: 'Cascadia Code';
-}
+
 
 /*============FORM=============*/

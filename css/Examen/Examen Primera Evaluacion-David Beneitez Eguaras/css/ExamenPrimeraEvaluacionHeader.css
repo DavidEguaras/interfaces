@@ -4,7 +4,8 @@ header {
     flex-direction: column;
     flex-wrap: wrap; 
     font-family: 'Cascadia Code';
-    font-weight: bold; /* No existe la propiedad font-style: bold; */
+    font-style: bold;
+    font-weight: 1000px;
 }
 
 .h-caja-top {
@@ -19,6 +20,8 @@ header {
     flex-direction: row;
 }
 
+
+
 /*==================burger==================*/
 .h-caja-bot-left {
     display: flex;
@@ -27,11 +30,10 @@ header {
     width: 10%;
     cursor: pointer;
     transition: 0.3s;
-    color:  rgb(255, 200, 0);
 }
 
 .h-caja-bot-left:hover {
-    color: white;
+    color: aqua;
 }
 
 .icono-menu {
@@ -46,6 +48,8 @@ header {
 }
 /*==================burger==================*/
 
+
+
 /* ===================MENU Y SUBMENU=================== */
 .h-caja-bot-mid {
     background-color: rgb(35, 47, 62);
@@ -55,97 +59,92 @@ header {
     justify-content: space-evenly;
     width: 70%;
 }
-
 .menu {
     display: flex;
     flex-direction: row;
     list-style: none;
-    
 }
-
 .opcion {
     position: relative;
     font-weight: lighter;
     font-size: 16px;
     margin-right: 20px;
-    padding: 4px;
+    padding: 2px;
     transition: 0.3s;
     border-radius: 10px;
 }
 
 .opcion:hover {
-    background-color: rgb(255, 200, 0);
+    background-color: aqua;
+}
+.opcion a{
 }
 
-.link-opcion {
-    text-decoration: none;
-    color: inherit;
-}
-
-.opcion:hover .link-opcion {
+.opcion:hover a{
     color: black;
 }
 
 .submenu {
     position: absolute;
-    z-index: 3;
     border-radius: 10px;
     top: 100%;
     left: 0;
     opacity: 0;
     visibility: hidden;
-    background-color:  rgba(255, 255, 255, .2);
-	backdrop-filter: blur(10px);
+    background-color: gray;
     transition: opacity 0.3s ease;
     min-width: max-content;
-    padding: 10px;
+    z-index: 3;
 }
 
 .menu .opcion:hover .submenu {
     opacity: 1;
     visibility: visible;
 }
-
-.subopcion{
-    border-radius: 10px;
-    padding: 5px;
+.subopcion {
+    position: relative;
 }
-
-.subopcion:hover {
-    background-color: rgb(255, 200, 0);
-}
-.subopcion:hover a{
-    background-color: rgb(255, 200, 0);
-    color: #000;
+.subopcion :hover{
+    background-color: aqua;
 }
 .link-subopcion {
     color: white;
     transition: 0.3s;
-    border-radius: 10px;
-    margin: 3px;
 }
+.link-subopcion :hover {
+    background-color: aqua;
+}
+
+.menu .opcion:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+/* ===================MENU Y SUBMENU=================== */
+
+
+
 /* =================OFERTAS=============== */
-.h-caja-bot-right {
+.h-caja-bot-right{
     width: 20%;
     display: flex;
     flex-direction: column;
-    color: rgb(255, 200, 0);;
+    color: white;
     padding-top: 10px;
 }
 
-.txt-ofertas {
+.txt-ofertas{
     display: flex;
     justify-content: center;
 }
-
-.txt-ofertas-small {
+.txt-ofertas-small{
     display: flex;
     justify-content: center;
 }
-
-.color {
-    font-family: 'Cascadia Code', monospace;
-    font-style: italic; /* Cambiado de color a font-style */
-    color: rgb(255, 200, 0);
+.color{
+    font-family:'Cascadia Code', monospace;
+    font-style: italic;
+    color:aqua;
 }
 /* =================OFERTAS=============== */
+
+/*======================CAJA BOT======================*/
