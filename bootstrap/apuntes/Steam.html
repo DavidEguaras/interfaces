@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Menú Responsive con Bootstrap</title>
+
+    <style>
+        body{
+            font-family: "Motiva Sans", Sans-serif !important;
+        }
+        header{
+            background: #171d25;
+        }
+
+        .container{
+            padding: 5px;
+        }
+
+        .nav-link{
+            color: white;
+            transition: color 0.3s;
+            transition: 0.3s;
+            font-size: 20px;
+        }
+        .nav-link:hover{
+            color: black;
+            background-color: deepskyblue;
+            border-radius: 25px;
+        }
+
+        .menu-toggle{
+            color: white;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .menu-toggle:hover{
+            text-decoration: none;
+            color: black !important;
+            background-color: deepskyblue;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header class="text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="Logo_Steam.PNG" alt="Steam Logo">
+            </div>
+
+            <div class="Menu-Servicios">
+                <button class="menu-toggle btn btn-link text-white d-lg-none">
+                    <span class="me-2">Menu-Servicios</span>
+                    <span class="burger">&#9776;</span>
+                </button>
+                <nav class="nav flex-column flex-lg-row d-none d-lg-flex">
+                    <a class="nav-link" href="#">TIENDA</a>
+                    <a class="nav-link" href="#">COMUNIDAD</a>
+                    <a class="nav-link" href="#">ACERCA DE</a>
+                    <a class="nav-link" href="#">SOPORTE</a>
+                </nav>
+            </div>
+
+            <div class="Menu-Login">
+                <button class="menu-toggle btn btn-link text-white d-lg-none">
+                    <span class="me-2">Menu-Login</span>
+                    <span class="burger">&#9776;</span>
+                </button>
+                <nav class="nav flex-column flex-lg-row d-none d-lg-flex">
+                    <a class="" href="#">Instalar Steam</a>
+                    <a class="" href="#">Register</a>
+                    <a class="" href="#">Idioma</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggleServicios = document.querySelector('.Menu-Servicios .menu-toggle');
+            const menuToggleLogin = document.querySelector('.Menu-Login .menu-toggle');
+            const navLinksServicios = document.querySelector('.Menu-Servicios nav');
+            const navLinksLogin = document.querySelector('.Menu-Login nav');
+
+            menuToggleServicios.addEventListener('click', function () {
+                navLinksServicios.classList.toggle('d-none');
+                navLinksLogin.classList.add('d-none');
+            });
+
+            menuToggleLogin.addEventListener('click', function () {
+                navLinksLogin.classList.toggle('d-none');
+                navLinksServicios.classList.add('d-none');
+            });
+        });
+    </script>
+</body>
+
+</html>
