@@ -14,22 +14,24 @@
         header{
             background: #171d25;
         }
-
         .container{
-            padding: 5px;
+            padding: 0px 100px;
         }
+
 
         .nav-link{
             color: white;
             transition: color 0.3s;
             transition: 0.3s;
-            font-size: 20px;
+            font-size: 18px;
         }
-        .nav-link:hover{
-            color: black;
-            background-color: deepskyblue;
-            border-radius: 25px;
+        .nav-link:hover {
+            color: white;
+            transition: color 0.3s;
+            transition: 0.3s;
+            font-size: 18px;
         }
+
 
         .menu-toggle{
             color: white;
@@ -37,11 +39,55 @@
             transition: 0.2s;
         }
         .menu-toggle:hover{
-            text-decoration: none;
-            color: black !important;
-            background-color: deepskyblue;
-            border-radius: 25px;
+            color: deepskyblue !important;
+            text-decoration: underline;
+            text-decoration-color: deepskyblue;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 3px;
+            text-decoration-skip-ink: none;
         }
+
+
+        .button-link {
+            display: inline-block;
+            padding: 10px 10px;
+            text-decoration: none;
+            background-color: #008000; /* Green background */
+            color: white; /* White text */
+            border-radius: 4px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .button-link:hover {
+            background-color: #006600; /* Darker green on hover */
+        }
+
+
+        .first-menu {
+            margin-left: -50rem; /* Adjust as needed */
+            display: flex;
+            flex-direction: row;
+        }
+        .second-menu {     
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 0px;
+        }
+
+        .sesion-links{
+            font-size: 14px;
+        }
+
+
+        .active-link {
+            color: deepskyblue !important;
+            text-decoration: underline;
+            text-decoration-color: deepskyblue;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 3px;
+            text-decoration-skip-ink: none;
+        }
+
+
     </style>
 </head>
 
@@ -54,28 +100,24 @@
                 <img src="Logo_Steam.PNG" alt="Steam Logo">
             </div>
 
-            <div class="Menu-Servicios">
+            <div class="Menu">
                 <button class="menu-toggle btn btn-link text-white d-lg-none">
-                    <span class="me-2">Menu-Servicios</span>
+                    <span class="me-2">Menu</span>
                     <span class="burger">&#9776;</span>
                 </button>
-                <nav class="nav flex-column flex-lg-row d-none d-lg-flex">
-                    <a class="nav-link" href="#">TIENDA</a>
-                    <a class="nav-link" href="#">COMUNIDAD</a>
-                    <a class="nav-link" href="#">ACERCA DE</a>
-                    <a class="nav-link" href="#">SOPORTE</a>
-                </nav>
-            </div>
+                <nav class="nav flex-row flex-lg-row d-none d-lg-flex">
+                    <div class="first-menu">
+                        <a class="nav-link" href="#">TIENDA</a>
+                        <a class="nav-link" href="#">COMUNIDAD</a>
+                        <a class="nav-link" href="#">ACERCA DE</a>
+                        <a class="nav-link" href="#">SOPORTE</a>
+                    </div>
+                    <div class="second-menu">
+                        <a class="sesion-link button-link" href="#">Instalar Steam</a>
+                        <a class="sesion-link" href="#"> Register </a>
+                        <a class="sesion-link" href="#"> Idioma </a>
+                    </div>
 
-            <div class="Menu-Login">
-                <button class="menu-toggle btn btn-link text-white d-lg-none">
-                    <span class="me-2">Menu-Login</span>
-                    <span class="burger">&#9776;</span>
-                </button>
-                <nav class="nav flex-column flex-lg-row d-none d-lg-flex">
-                    <a class="" href="#">Instalar Steam</a>
-                    <a class="" href="#">Register</a>
-                    <a class="" href="#">Idioma</a>
                 </nav>
             </div>
         </div>
@@ -84,26 +126,22 @@
     <main>
         
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const menuToggleServicios = document.querySelector('.Menu-Servicios .menu-toggle');
-            const menuToggleLogin = document.querySelector('.Menu-Login .menu-toggle');
-            const navLinksServicios = document.querySelector('.Menu-Servicios nav');
-            const navLinksLogin = document.querySelector('.Menu-Login nav');
-
-            menuToggleServicios.addEventListener('click', function () {
-                navLinksServicios.classList.toggle('d-none');
-                navLinksLogin.classList.add('d-none');
-            });
-
-            menuToggleLogin.addEventListener('click', function () {
-                navLinksLogin.classList.toggle('d-none');
-                navLinksServicios.classList.add('d-none');
+            var navLinks = document.querySelectorAll('.nav-link');
+    
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navLinks.forEach(function (link) {
+                        link.classList.remove('active-link');
+                    });
+    
+                    this.classList.add('active-link');
+                });
             });
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
