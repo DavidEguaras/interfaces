@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .alert-cookie {
+        z-index: 9999999;
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 2%;
+        border-left: 2px solid aquamarine;
+        border-radius: 0%;
+        background-color: #25282e;
+        color: white;
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+    }
+
+    .txt-alert {
+        font-size: 13px;
+        color: lightgrey;
+        font-weight: 500;
+    }
+
+    .btn-alert-cookie {
+        border-radius: 0;
+        font-size: 14px;
+        background: linear-gradient(to right, #47bfff 5%, #1a44c2 60%);
+    }
+
+    .a-cookie {
+        color: beige;
+    }
+
+    .txt-consola {
+        color: #88bde9;
+        font-weight: bold;
+        margin:0px;
+        padding:0px;
+
+
+    }
+    .txt-consola2 {
+        margin:0px;
+        padding:0px;
+        color:#a4b3c4
+    }</style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="caja-alert-cookie fixed-bottom">
+        <div class="alert alert-info alert-dismissible fade show alert-cookie shadow" role="alert">
+ 
+            <div class="row">
+                <div class="col-10">
+                    <p class="txt-alert">
+                        ¿Te parece bien que utilicemos cookies opcionales para sugerirte contenido personalizado y
+                        analizar
+                        el
+                        tráfico del sitio web?
+                    </p>
+                    <p class="txt-alert">
+                        No utilizamos muchas cookies; puedes verlas y administrarlas en cualquier momento en la
+                        <a href="" class="a-cookie">página de configuración de cookies</a>. Si haces clic en «Aceptar
+                        todas», consientes el uso de cookies en los
+                        sitios
+                        web
+                        de Steam. Más información sobre las cookies en nuestra
+                        <a href="" class="a-cookie"> Política de Privacidad. </a>
+                    </p>
+                </div>
+                <div class="col-2 d-flex flex-column">
+                    <button type="button" class="btn btn-primary mb-2 btn-alert-cookie" data-bs-dismiss="alert" aria-label="Close">Aceptar todas</button>
+                    <button type="button" class="btn btn-primary btn-alert-cookie" data-bs-dismiss="alert" aria-label="Close">Rechazar todas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Cierra la alerta cuando se hace clic en el botón de cerrar
+        document.addEventListener('DOMContentLoaded', function () {
+            var alerta = new bootstrap.Alert(document.querySelector('.alert'));
+        });
+    </script>
+</body>
+</html>

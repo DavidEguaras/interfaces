@@ -8,21 +8,13 @@
     <title>David's steam</title>
 
     <style>
+        /* Tengo que integrar mas y mejor bootstrap, esto es lo que tengo de momento*/
         body{
-            font-family: "Motiva Sans", Sans-serif !important;
+            font-family: "Motiva Sans", Sans-serif;
+            background-color:#171d25 ;
         }
         header{
             background: #171d25;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-        nav{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
         }
         .container{
             background: #171d25;
@@ -30,18 +22,14 @@
             width: 940px;
             height: 104px;
             margin: 0px auto;
-            z-index: 402;
             padding: 0px;
         }
+
 
         .logo img {
             max-width: 100%;
             height: auto;
-            margin-right: 0; /* Puedes ajustar el margen si es necesario */
-        }
-        .logo-menu {
-            display: flex;
-            align-items: center;
+            margin-right: 0;
         }
         .logo-and-left-header {
             display: flex;
@@ -50,32 +38,25 @@
 
 
         .left-header {
-            display: flex;
-            align-items: center;
             margin-left: 60px;
-            width: auto;
         }
-
         .left-header a {
-            font-family: "Cascadia Code";
-            color: #F5F5F5;
-            font-size: 17px;
+            font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif !important;
+            color: #d6d2d2;
+            font-size: 16px;
             font-weight: bold;
             margin-right: 15px;
             letter-spacing: 0px;
         }
-
-        .right-header {
-            position: absolute;
-            top: 0;
-            right: 20px;
-            margin-left: 20px;
-            display: flex;
-            align-items: center;
-            background-color: #171d25;
-            padding: 10px;
+        .left-header a:hover {
+            text-decoration: none;
+            color:white
         }
 
+
+        .right-header{
+
+        }
         .right-header button {
             padding: 1px;
             border: none;
@@ -93,26 +74,108 @@
             margin-left: 20px;
             font-weight: normal;
             letter-spacing: 0px;
+            margin-right: 10px;
         }
         .right-header a:hover {
             text-decoration: none;
             color:white
         }
 
+
         .active-link {
             color: deepskyblue !important;
             text-decoration: underline;
             text-decoration-color: deepskyblue;
             text-decoration-thickness: 4px;
-            text-underline-offset: 3px;
             text-decoration-skip-ink: none;
+        }
+        .nav-link {
+            cursor: pointer;
+        }
+
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            border-radius: 0%;
+        }
+        .dropdown-menu {
+            background-color:#67707b;
+            border: none;
+            margin: none;
+            padding: 0px;
+        }
+        .dropdown-toggle::after {
+            display: none;
+        }
+        .dropdown-item{
+            cursor: pointer;
+            font-family:  "Motiva Sans", Sans-serif !important;
+            font-size: 12px !important;
+            padding: 7px;
+        }
+        .dropdown-item:hover {
+            color: dimgray!important;
+        }
+
+
+
+        .page-content{
+            background-color: #091813
+        }
+        .fullscreen-bg {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .fullscreen-bg-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nav-pagecontent {
+            width: 940px;
+            height: 45px;
+            padding: 0;
+            display:flex;
+            position: relative;
+            margin: 0px auto;
+            padding: 0px;
+            justify-content: center;
+            background: linear-gradient(90deg, rgba(62, 103, 150, 0.919) 11.38%, rgba(58, 120, 177, 0.8) 25.23%, rgb(15, 33, 110) 100%);
+            box-shadow: 0 0 3px rgba( 0, 0, 0, 0.4);
+        }
+
+        .pagecontent-links {
+            font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif !important;
+            padding: 15px 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .searcharea form {
+            display: flex;
+        }
+
+        .searcharea input {
+            border: none;
+            border-radius: 3px;
+        }
+
+        .searcharea button {
+            border: none;
+            background: none;
         }
 
     </style>
 </head>
 
 <body>
-    <header class="text-white">
+    <header class="d-flex align-items-center justify-content-start">
 
 
         <div class="container d-flex justify-content-between align-items-center">
@@ -123,39 +186,97 @@
         
                 <div class="menu">
                     <nav>
-                        <div class="left-header">
-                            <a class="nav-link" href="#">TIENDA</a>
-                            <a class="nav-link" href="#">COMUNIDAD</a>
+                        <div class="left-header d-flex align-items-center w-auto">
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle">
+                                  TIENDA
+                                </a>
+                                <div class="dropdown-menu ">
+                                  <a class="dropdown-item" href="#">Inicio</a>
+                                  <a class="dropdown-item" href="#">Lista de Descubrimientos</a>
+                                  <a class="dropdown-item" href="#">Lista de Deseados</a>
+                                  <a class="dropdown-item" href="#">Tienda de Puntos</a>
+                                  <a class="dropdown-item" href="#">Noticias</a>
+                                  <a class="dropdown-item" href="#">Estadisticas</a>
+
+
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle">
+                                  COMUNIDAD
+                                </a>
+                                <div class="dropdown-menu ">
+                                  <a class="dropdown-item" href="#">Inicio</a>
+                                  <a class="dropdown-item" href="#">Discusiones</a>
+                                  <a class="dropdown-item" href="#">Workshop</a>
+                                  <a class="dropdown-item" href="#">Mercado</a>
+                                  <a class="dropdown-item" href="#">Retransmisiones</a>
+                                </div>
+                            </div>
                             <a class="nav-link" href="#">ACERCA DE</a>
                             <a class="nav-link" href="#">SOPORTE</a>
+                            
                         </div>
                     </nav>
                 </div>
             </div>
         
-            <div class="right-header">
+            <div class="right-header position-absolute top-0 end-0 ms-2 d-flex align-items-center p-2" style="color: white">
                 <button class="button-link" href="#">
                     <img src="install.PNG"> Instalar Steam
                 </button>
-                <a class="" href="#"> iniciar Sesion </a>|
+                <a class="" href="#"> iniciar Sesion </a> |
                 <a class="" href="#"> idioma </a>
             </div>
         </div>
     </header>
 
+    <div class="pagecontent">
+        <div class="bg-pagecontent">
+            <video loop="" muted="" autoplay="" playsinline="" poster="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/6246a56774e6a7983d8aef28/page_bg_spanish.jpg?t=1704734364" class="fullscreen-bg-video">
+                <source src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/6246a56774e6a7983d8aef28/webm_page_bg_spanish.webm?t=1704734364" type="video/webm">
+                <source src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/6246a56774e6a7983d8aef28/mp4_page_bg_spanish.mp4?t=1704734364" type="video/mp4">
+            </video>
+        </div>
+        <nav class="nav-pagecontent">
+            <a class="pagecontent-links" href="#">Tu tienda</a>
+            <a class="pagecontent-links" href="#">Nuevo y Destacable</a>
+            <a class="pagecontent-links" href="#">Categorias</a>
+            <a class="pagecontent-links" href="#">Tienda de puntos</a>
+            <a class="pagecontent-links" href="#">Noticias</a>
+            <a class="pagecontent-links" href="#">Laboratorios</a>
+            <div class="searcharea pagecontent-links">
+                <form>
+                    <input type="search" placeholder="buscar">
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+
+
     <main>
     </main>
 
     <script>
+        //funcion de chatgpt
+        // Escucha el evento 'DOMContentLoaded', que se dispara cuando el documento HTML ha sido completamente cargado y parseado
         document.addEventListener('DOMContentLoaded', function () {
+        // Selecciona todos los elementos con la clase 'nav-link'
             var navLinks = document.querySelectorAll('.nav-link');
 
+            // Itera sobre cada enlace
             navLinks.forEach(function (link) {
+             // Añade un evento de click a cada enlace
                 link.addEventListener('click', function () {
+                    // Cuando se hace click en un enlace, primero se remueve la clase 'active-link' de todos los enlaces
                     navLinks.forEach(function (link) {
-                        link.classList.remove('active-link');
-                    });
+                    link.classList.remove('active-link');
+                });
 
+                    // Luego, se añade la clase 'active-link' al enlace que fue clickeado
                     this.classList.add('active-link');
                 });
             });
