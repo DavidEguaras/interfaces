@@ -120,7 +120,9 @@
 
 
         .page-content{
-            background-color: #091813
+            background-color: #091813;
+            position: relative;
+            z-index: 1;
         }
         .fullscreen-bg {
             position: relative;
@@ -140,10 +142,12 @@
             height: 45px;
             padding: 0;
             display:flex;
-            position: relative;
+            top: 100;
+            position: absolute;
             margin: 0px auto;
             padding: 0px;
             justify-content: center;
+            z-index: 2;
             background: linear-gradient(90deg, rgba(62, 103, 150, 0.919) 11.38%, rgba(58, 120, 177, 0.8) 25.23%, rgb(15, 33, 110) 100%);
             box-shadow: 0 0 3px rgba( 0, 0, 0, 0.4);
         }
@@ -236,23 +240,26 @@
         <div class="bg-pagecontent">
             <video loop="" muted="" autoplay="" playsinline="" poster="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/6246a56774e6a7983d8aef28/page_bg_spanish.jpg?t=1704734364" class="fullscreen-bg-video">
                 <source src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/6246a56774e6a7983d8aef28/webm_page_bg_spanish.webm?t=1704734364" type="video/webm">
-                <source src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/6246a56774e6a7983d8aef28/mp4_page_bg_spanish.mp4?t=1704734364" type="video/mp4">
+                <source src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/6246a56774e6a7983d8aef28/mp4_page_bg_spanish.mp4?t=1704734364" type="video/mp4">\
             </video>
-        </div>
-        <nav class="nav-pagecontent">
-            <a class="pagecontent-links" href="#">Tu tienda</a>
-            <a class="pagecontent-links" href="#">Nuevo y Destacable</a>
-            <a class="pagecontent-links" href="#">Categorias</a>
-            <a class="pagecontent-links" href="#">Tienda de puntos</a>
-            <a class="pagecontent-links" href="#">Noticias</a>
-            <a class="pagecontent-links" href="#">Laboratorios</a>
-            <div class="searcharea pagecontent-links">
-                <form>
-                    <input type="search" placeholder="buscar">
-                    <button type="submit"></button>
-                </form>
+            <div class="container">
+                <nav class="nav-pagecontent">
+                    <a class="pagecontent-links" href="#">Tu tienda</a>
+                    <a class="pagecontent-links" href="#">Nuevo y Destacable</a>
+                    <a class="pagecontent-links" href="#">Categorias</a>
+                    <a class="pagecontent-links" href="#">Tienda de puntos</a>
+                    <a class="pagecontent-links" href="#">Noticias</a>
+                    <a class="pagecontent-links" href="#">Laboratorios</a>
+                    <div class="searcharea pagecontent-links">
+                        <form>
+                            <input type="search" placeholder="buscar">
+                            <button type="submit"></button>
+                        </form>
+                    </div>
+                </nav>
             </div>
-        </nav>
+            
+        </div>
     </div>
 
 
