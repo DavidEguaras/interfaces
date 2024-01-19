@@ -9,26 +9,31 @@ header{
     background-color:#fff;
     margin: 0px;
 }
+.margin{
+    margin-left: 70px;
+}
+.texto{
+    width: 100px;
+}
 .top{
     background-color: #555 !important;
     padding: 10px;
     color: #fff;
     font-size: 13px;
 }
-.btn{
-    margin-left: 20%;
-    font-size: .738rem;
-}
 .logocontainer{
     margin-left: 20%;
     margin-right: 20px;
+}
+.nav-link{
+    text-decoration: none !important;
 }
 .nav-item{
     font-family: "Roboto",Helvetica,Arial,sans-serif;
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 700;
-    padding: 25px 20px 25px 20px;
+    padding: 25px 5px 25px 5px;
     letter-spacing: 1px;
     color: #555;
     cursor: pointer;
@@ -36,8 +41,16 @@ header{
 .nav-item:hover{
     background-color: #4fbfa8;
 }
-
-#carousel {
-    margin-left: 20%;
+.list-inline-item a{
+    margin-right: 10px;
+    text-decoration: none;
+    color:white;
+    font-size: 12px;
+}
+main{
     margin-right: 20%;
+    margin-left: 20%;
+}
+.cart{
+    background-color: #fff;
 }
