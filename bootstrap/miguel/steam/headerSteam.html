@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+    <style>
+        .header-config{
+            min-height: 6.5rem;
+            background-color: #171d25;
+        }
+        .containerPrincipal{
+            
+        }
+        .img-logo{
+            height: 50px;
+        }
+        /* ul{
+            list-style: none;
+        } */
+        .nav-link{
+            color: rgba(255, 255, 255, 0.884);
+        }
+        .menuSesion{
+            color: rgba(255, 255, 255, 0.884);
+            font-size: small;
+        }
+        .cajaInstalar{
+            background-color: rgb(92, 126, 16);
+        }
+        html{
+            background-color: rgb(27, 40, 56);
+            color: rgba(255, 255, 255, 0.884);
+        }
+        main{
+            background-color: rgb(27, 40, 56);
+        }
+        .navMain{
+            background: rgb(52,148,204);
+            background: linear-gradient(to right, rgb(55,95,136), rgba(15,34,110));
+            opacity: 0.9;
+            z-index: 2;
+            position: relative;
+            top: 10px;
+        }
+        .nav-link-Main{
+            font-weight: bold;
+        }
+        .form-main{
+            padding: 0;
+        }
+        .search{
+            background-color: rgb(95,132,155);
+        }
+        .search::placeholder{
+            color: rgb(54, 54, 54);
+            font-style: italic;
+        }
+        .contenedorVideo{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: -60px;
+            z-index: 1;
+        }
+        .video-banner{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header-config container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-5 d-flex p-3">
+                <div class="navbar flex-row p-3">    
+                    <div class="navbar-brand">
+                        <img class="img img-fluid img-logo" src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="">
+                    </div>
+                    <ul class="navbar-nav d-flex flex-row jlist-unstyled">
+                        <li class="elementoMenu">
+                            <a class="nav-link m-3 text-info" href="#"><u>TIENDA</u></a>
+                        </li>
+                        <li class="elementoMenu">
+                            <a class="nav-link m-3" href="#">COMUNIDAD</a>
+                        </li>
+                        <li class="elementoMenu">
+                            <a class="nav-link m-3" href="#">ACERCA DE</a>
+                        </li>
+                        <li class="elementoMenu">
+                            <a class="nav-link m-3" href="#">SOPORTE</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+
+                <nav class="col-3 navbar-expand-xl menuSesion">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse show" id="navbarWithDropdown">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item m-2 cajaInstalar">
+                                    
+                                    <a class="nav-link" href="#"><i class="fas fa-download"></i> Instalar Steam</a>
+                                </li>
+                                <li class="nav-item m-2">
+                                    <a class="nav-link" href="#">iniciar sesión</a>
+                                </li>
+                                |
+                                <li class="nav-item m-2 dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        idioma
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">简体中文 (chino simplificado)</a></li>
+                                        <li><a class="dropdown-item" href="#">繁體中文 (chino tradicional)</a></li>
+                                        <li><a class="dropdown-item" href="#">日本語 (japonés)</a></li>
+                                        <li><a class="dropdown-item" href="#">한국어 (coreano)</a></li>
+                                        <li><a class="dropdown-item" href="#">ไทย (tailandés)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div> 
+            
+        </div>
+    </header>
+    <main>
+        <div class="justify-content-center navbar navbar-expand-sm align-middle ml-5 mr-5 navMain">
+            <ul class="navbar-nav d-flex flex-row list-unstyled">
+                <li class="elementoNavMain">
+                    <a href="#" class="nav-link nav-link-Main">Tu tienda</a>
+                </li>
+                <li class="elementoNavMain">
+                    <a href="#" class="nav-link nav-link-Main">Nuevo y destacable</a>
+                </li>
+                <li class="elementoNavMain">
+                    <a href="#" class="nav-link nav-link-Main">Categorías</a>
+                </li>
+                <li class="elementoNavMain">
+                    <a href="#" class="nav-link nav-link-Main">Tienda de puntos</a>
+                </li>
+                <li class="elementoNavMain">
+                    <a href="#" class="nav-link nav-link-Main">Noticias</a>
+                </li>
+                <li class="elementoNavMain">
+                    <a href="#" class="nav-link nav-link-Main">Laboratorios</a>
+                </li>
+            </ul>
+            <form class="main-form p-0" action="#" method="post">
+                <input type="search" name="search" id="search" placeholder="buscar" class="search">
+                <button class="search-icon">&#128269;</button>
+            </form>
+        </div>
+        <div class="contenedorVideo">
+            <video class="d-block video-banner" autoplay playsinline loop muted>
+                <source src="https://cdn.akamai.steamstatic.com/steam/clusters/frontpage/6246a56774e6a7983d8aef28/webm_page_bg_spanish.webm?t=1704734364"/>
+            </video>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

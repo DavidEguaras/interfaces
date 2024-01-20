@@ -1,26 +1,20 @@
-body{
-    background-color:#f0f0f0;
-    margin:0px;
-    font-family: "Roboto", sans-serif !important;
-}
+/* ---------HEADER--------- */
 
-
-header{
-    background-color:#fff;
-    margin: 0px;
-}
 .margin{
     margin-left: 70px;
-}
-.texto{
-    width: 100px;
 }
 .top{
     background-color: #555 !important;
     padding: 10px;
     color: #fff;
-    font-size: 13px;
+    font-size: 14px;
 }
+.menu.list-inline {
+    display: inline-block;
+    margin-right: 70px;
+}
+
+
 .logocontainer{
     margin-left: 20%;
     margin-right: 20px;
@@ -47,10 +41,4 @@ header{
     color:white;
     font-size: 12px;
 }
-main{
-    margin-right: 20%;
-    margin-left: 20%;
-}
-.cart{
-    background-color: #fff;
-}
+/* --------- !HEADER--------- */
