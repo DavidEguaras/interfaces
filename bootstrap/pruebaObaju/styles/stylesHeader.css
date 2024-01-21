@@ -11,6 +11,7 @@
 }
 .menu.list-inline {
     display: inline-block;
+    margin-right: 70px;
 }
 
 
@@ -39,5 +40,8 @@
     text-decoration: none;
     color:white;
     font-size: 12px;
+}
+.rightContainer{
+   margin-left: 310px;
 }
 /* --------- !HEADER--------- */
