@@ -1,0 +1,13 @@
+$color:green;
+$colores:red, green, blue, yellow;
+$colores2: orange black white purple;
+
+$lista-compuesta: join ($colores, $colores2);
+$lista-compuesta: append($lista-compuesta, gray, slash);
+
+$primerColor: nth($lista-compuesta, 1);
+$segundoColor: nth($lista-compuesta, 2);
+
+body{
+    background-color: $color;
+}

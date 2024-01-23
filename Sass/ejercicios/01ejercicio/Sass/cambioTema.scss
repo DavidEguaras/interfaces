@@ -1,0 +1,7 @@
+$mapa-colores: (principal: #000, secundario: #fff, terciario: #ccc);
+
+
+header{
+    background-color: map-get($mapa-colores, principal);
+    color: map-get($mapa-colores, secundario);
+}

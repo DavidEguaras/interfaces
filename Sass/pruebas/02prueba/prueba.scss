@@ -1,0 +1,10 @@
+//VARIABLES PREDETERMINADAS
+$color-primario: purple;
+$color-primario: green;
+
+$color-primario: red;
+
+body{
+   $color-primario:blue !global;
+   background-color: $color-primario; 
+}  
