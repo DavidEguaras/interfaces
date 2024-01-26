@@ -1,0 +1,80 @@
+//DEFINICION Y USO DE VARIABLES
+$color-primario: #3498db;
+$color-secundario: #e74c3c;
+
+.header {
+  background-color: $color-primario;
+  color: $color-secundario;
+}
+
+//AMBITOS DE VARIABLES
+$color-primario: #3498db;
+
+.header {
+  $color-secundario: #e74c3c;
+  background-color: $color-primario;
+}
+
+.footer{
+  // $color-secundario no está disponible aquí
+  background-color: $color-secundario;
+}
+
+
+//VARIABLES PREDETERMINADAS
+$color-primario: purple !default;
+$color-secundario: green;
+
+.header {
+  background-color: $color-primario;
+}
+
+//variable sin default, ya no se puede modificar, es lo que entendemos por constante
+$color-secundario: red; //ERROR
+
+// Esto generaría un error porque intentas redefinir la variable
+$ancho-caja: 300px;
+
+
+
+//VARIABLES COMO ARGUMENTOS
+@function calcular-ancho($base, $factor) {
+  @return $base * $factor;
+}
+
+$ancho-caja: calcular-ancho(200px, 1.5);
+
+.caja {
+  width: $ancho-caja;
+}
+
+
+//INTERPOLACION
+$prefixo: "mi";
+
+.#{$prefixo}-clase {
+  font-weight: bold;
+}
+
+
+//VARIABLES EN SELECTORES
+$tema: "oscuro";
+
+.#{$tema} {
+  background-color: #333;
+  color: #fff;
+}
+
+
+//MODIFICACION DE VARIALBES A NIVEL DE BLOQUE
+$color-primario: #3498db;
+
+.seccion {
+  $color-primario: #e74c3c !global;
+  background-color: $color-primario;
+}
+
+.otra-seccion {
+  background-color: $color-primario; // #e74c3c
+}
+

@@ -1,11 +1,28 @@
-$mapa-colores: (principal: #000, secundario: #fff, terciario: #ccc);
+$mapa-oscuro: (header: black, footer: black, main: gray, button: green, boton1:orange, boton2:wheat);
+$mapa-claro: (header: gray, footer: gray, main: black, button: red, boton1:white, boton2:white);
+$mapa-medidas: (header: 10vh, footer: 5vh, main:80vh);
 
+$mapa-degradados: (
 
-header{
-    background-color: map-get($mapa-colores, principal);
-    color: map-get($mapa-colores, secundario);
+);
+
+$posicion: 2;
+
+.btn{
+    @if(posicion == 2){
+        background-color: map-get($mapa-oscuro,'boton1');
+        color:white !important;
+    }@else{
+        background-color: map-get($mapa-claro, 'boton2') !important;
+        color:black !important;
+    }
 }
 
-footer{
-    
+header{
+    @if($posicion == 2){
+        background-color: map-get($mapa-oscuro,'boton2') !important;
+        color: black !important;
+    }@else{
+        background-color: map-get( $mapa-claro,'boton' );
+    }
 }

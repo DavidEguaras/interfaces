@@ -1,0 +1,48 @@
+$condicion: true;
+
+@if $condicion {
+  // Código a ejecutar si la condición es verdadera
+} @else {
+  // Código a ejecutar si la condición es falsa
+}
+
+
+$color: red;
+
+@if $color == red {
+  body {
+    background-color: $color;
+    color: white;
+  }
+} @else {
+  body {
+    background-color: white;
+    color: black;
+  }
+}
+
+
+$edad: 25;
+
+@if $edad > 18 {
+  p {
+    background-color:  blue;
+  }
+} @else {
+  p {
+    background-color: green;
+  }
+}
+
+
+$nota: 75;
+
+@if $nota > 90 {
+  // Código si la nota es mayor que 90
+} @else if $nota > 70 {
+  // Código si la nota es mayor que 70 pero menor o igual a 90
+} @else {
+  // Código si la nota es 70 o menor
+}
+
+

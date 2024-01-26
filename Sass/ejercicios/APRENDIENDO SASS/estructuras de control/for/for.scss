@@ -1,0 +1,33 @@
+@for $variable from <start> through <end> {
+    // Código a repetir
+  }
+ // $variable: La variable que se incrementará en cada iteración.
+ // <start>: El valor inicial de la variable.
+ // <end>: El valor final de la variable.  
+
+ @for $i from 1 through 5 {
+    .item-#{$i} {
+      width: 20px * $i;
+    }
+  }
+
+  
+  //Iteracion por rango
+  @for $i from 1 to 6 {
+    .item-#{$i} {
+      height: 30px * $i;
+    }
+  }
+  //En este caso, se crearán clases .item-1 hasta .item-5, ya que el rango es hasta, pero sin incluir, el valor 6.
+
+
+  //Con uso de variables
+  $start: 2;
+  $end: 6;
+  
+  @for $i from $start through $end {
+    .item-#{$i} {
+      font-size: 16px + $i;
+    }
+  }
+   
