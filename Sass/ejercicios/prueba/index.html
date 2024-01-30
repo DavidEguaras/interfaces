@@ -18,7 +18,38 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title text-center">Temperatura en Zamora</h2>
-                <div id="resultado" class="mt-4"></div>
+
+                <!-- Bootstrap Accordion -->
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingToday">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseToday" aria-expanded="true" aria-controls="collapseToday">
+                                    Hoy
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseToday" class="collapse show" aria-labelledby="headingToday" data-parent="#accordion">
+                            <div class="card-body" id="resultadoToday"></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTomorrow">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTomorrow" aria-expanded="false" aria-controls="collapseTomorrow">
+                                    Mañana
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseTomorrow" class="collapse" aria-labelledby="headingTomorrow" data-parent="#accordion">
+                            <div class="card-body" id="resultadoTomorrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bootstrap Accordion -->
             </div>
         </div>
     </div>
@@ -29,10 +60,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <script>
-        const apiUrl = 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/303121?apikey=zdoiFZiDaxZb9RHnsrC1W1GKkEMIoHEd&language=es-es';
-        const resultadoDiv = document.getElementById('resultado');
+        const apiUrlToday = 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/303121?apikey=zdoiFZiDaxZb9RHnsrC1W1GKkEMIoHEd&language=es-es';
+        const apiUrlTomorrow = 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/303121?apikey=zdoiFZiDaxZb9RHnsrC1W1GKkEMIoHEd&language=es-es';
+        const resultadoTodayDiv = document.getElementById('resultadoToday');
+        const resultadoTomorrowDiv = document.getElementById('resultadoTomorrow');
 
-        fetch(apiUrl)
+        // Fetch today's data
+        fetch(apiUrlToday)
             .then(response => response.json())
             .then(data => {
                 const fMin = data.DailyForecasts[0].Temperature.Minimum.Value;
@@ -41,15 +75,36 @@
                 const gradosMax = (fMax - 32) * 5 / 9;
 
                 // Crear el mensaje y asignarlo al contenido del div
-                const mensaje = `
+                const mensajeToday = `
                     <p class="lead">En Zamora, la temperatura mínima hoy ha sido ${gradosMin.toFixed(2)} ºC.</p>
                     <p class="lead">En Zamora, la temperatura máxima hoy ha sido ${gradosMax.toFixed(2)} ºC.</p>
                 `;
-                resultadoDiv.innerHTML = mensaje;
+                resultadoTodayDiv.innerHTML = mensajeToday;
             })
             .catch(error => {
-                console.error('Error al obtener datos de la API:', error);
-                resultadoDiv.innerHTML = '<p class="text-danger">Error al obtener datos de la API.</p>';
+                console.error('Error al obtener datos de la API (hoy):', error);
+                resultadoTodayDiv.innerHTML = '<p class="text-danger">Error al obtener datos de la API (hoy).</p>';
+            });
+
+        // Fetch tomorrow's data
+        fetch(apiUrlTomorrow)
+            .then(response => response.json())
+            .then(data => {
+                const fMin = data.DailyForecasts[0].Temperature.Minimum.Value;
+                const fMax = data.DailyForecasts[0].Temperature.Maximum.Value;
+                const gradosMin = (fMin - 32) * 5 / 9;
+                const gradosMax = (fMax - 32) * 5 / 9;
+
+                // Crear el mensaje y asignarlo al contenido del div
+                const mensajeTomorrow = `
+                    <p class="lead">En Zamora, la temperatura mínima mañana será ${gradosMin.toFixed(2)} ºC.</p>
+                    <p class="lead">En Zamora, la temperatura máxima mañana será ${gradosMax.toFixed(2)} ºC.</p>
+                `;
+                resultadoTomorrowDiv.innerHTML = mensajeTomorrow;
+            })
+            .catch(error => {
+                console.error('Error al obtener datos de la API (mañana):', error);
+                resultadoTomorrowDiv.innerHTML = '<p class="text-danger">Error al obtener datos de la API (mañana).</p>';
             });
     </script>
 </body>
