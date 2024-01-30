@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Temperatura</title>
+    
+    <!-- Add Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <header class="header-mb5">
+
+    </header>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title text-center">Temperatura en Zamora</h2>
+                <div id="resultado" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        const apiUrl = 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/303121?apikey=zdoiFZiDaxZb9RHnsrC1W1GKkEMIoHEd&language=es-es';
+        const resultadoDiv = document.getElementById('resultado');
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const fMin = data.DailyForecasts[0].Temperature.Minimum.Value;
+                const fMax = data.DailyForecasts[0].Temperature.Maximum.Value;
+                const gradosMin = (fMin - 32) * 5 / 9;
+                const gradosMax = (fMax - 32) * 5 / 9;
+
+                // Crear el mensaje y asignarlo al contenido del div
+                const mensaje = `
+                    <p class="lead">En Zamora, la temperatura mínima hoy ha sido ${gradosMin.toFixed(2)} ºC.</p>
+                    <p class="lead">En Zamora, la temperatura máxima hoy ha sido ${gradosMax.toFixed(2)} ºC.</p>
+                `;
+                resultadoDiv.innerHTML = mensaje;
+            })
+            .catch(error => {
+                console.error('Error al obtener datos de la API:', error);
+                resultadoDiv.innerHTML = '<p class="text-danger">Error al obtener datos de la API.</p>';
+            });
+    </script>
+</body>
+</html>

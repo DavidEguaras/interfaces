@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/oscuro.css" id="hoja-estilos">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <div class="row d-flex flex-direction-row">
+            <div class="col-2">
+                <a  href="" onclick="cambiarEstilos('../css/claro.css'); return false">Tema claro</a>
+            </div>
+            <div class="col-2">
+                <a class="btn btn-primary m-2" href="" onclick="cambiarEstilos('../css/oscuro.css'); return false">Tema oscuro</a>
+            </div>
+            <div class="col-3 justify-content-start">
+                <select class="form-select m-2" aria-label="Default select" id="temaSelect" onchange="cambiarEstilos(this.value)">
+                    <option selected="" disabled>Cambia el tema</option>
+                    <option value="../css/claro.css">Tema Claro</option>
+                    <option value="../css/oscuro.css">Tema Oscuro</option>
+                    <option value="otro">Otros temas...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-5">
+            <div class="row  ">
+                <div class="col-2">
+                    <div class="card w-100 h-100 shadow element-1 text-center">q</div>
+                </div>
+                <div class="col-2">
+                    <div class="card w-100 h-100 shadow element-2 text-center">q</div>
+                </div>
+                <div class="col-2">
+                    <div class="card w-100 h-100  shadow element-3 text-center">q</div>
+                </div>
+                <div class="col-2">
+                    <div class="card w-100 h-100 shadow  element-4 text-center">q</div>
+                </div>
+                <div class="col-2">
+                    <div class="card w-100 h-100 shadow element-5 text-center">q</div>
+                </div>
+                <div class="col-2">
+                    <div class="card w-100 h-100 shadow element-6  text-center">q</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="../js/miJs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

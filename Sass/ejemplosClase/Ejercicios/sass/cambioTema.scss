@@ -1,0 +1,90 @@
+$mapa-oscuro: (header: black, footer: black, main: gray, button: green, boton1: orange(155, 8, 155), boton2: brown,  colorPrimario: #ffff00, colorSecundario: orange);
+
+$mapa-claro: (header: gray, footer: gray, main: black, button: red, boton1: white,  boton2: white, colorPrimario: red, colorSecundario: aqua);
+
+$mapa-medidas:(header:10vh, footer:5vh, main:80vh);
+
+
+$mapa-ejemplo:(label-ancho:10px, label-alto:20px, button-ancho:3px, button-alto:7px, );
+
+
+$mapa-degradados:(1: linear-gradient(to top, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0)),
+                  2: linear-gradient(to top, rgb(11, 1, 98),     rgba(255, 0, 0, 0)),
+                  3: linear-gradient(to top, rgb(14, 117, 0),    rgba(255, 0, 0, 0)),
+                  4: linear-gradient(to top, rgb(195, 225, 4),   rgba(255, 0, 0, 0)), 
+                  5: linear-gradient(to top, rgb(3, 179, 223),   rgba(255, 0, 0, 0)),
+                  6: linear-gradient(to top, rgb(184, 116, 7),   rgba(255, 0, 0, 0)),
+                  7: linear-gradient(to top, rgb(140, 3, 117),   rgba(255, 0, 0, 0)),
+                  8: linear-gradient(to top, rgb(76, 155, 1),    rgba(255, 0, 0, 0)),
+                  9: linear-gradient(to top, rgb(223, 3, 179),   rgba(255, 0, 0, 0)),
+                  10:linear-gradient(to top, rgb(255, 202, 10),  rgba(255, 0, 0, 0)),);
+
+//Variable para compilar el tema
+$posicion:1;
+
+
+label{
+    width: map-get($mapa-ejemplo, label-ancho );
+}
+
+.btn{
+    @if($posicion==2){
+        background-color: map-get($mapa-oscuro, 'boton1' ) !important;
+        color: white !important;
+    }
+    @else{
+       background-color: map-get($mapa-claro, 'boton2' ) !important;
+       color:black !important
+    }
+}
+
+header{
+    @if($posicion==2){
+        background-color: map-get($mapa-oscuro, 'header' );
+    }
+    @else{
+        background-color: map-get($mapa-claro, 'header' );
+    }
+    
+    height:map-get($mapa-medidas, 'header');
+}
+
+footer{
+    @if($posicion==2){
+        background-color: map-get($mapa-oscuro, 'footer' );
+    }
+    @else{
+        background-color: map-get($mapa-claro, 'footer' );
+    }
+    height:map-get($mapa-medidas, 'footer');
+}
+
+main{
+    @if($posicion==2){
+        background-color: map-get($mapa-oscuro, 'main' );
+    }
+    @else{
+        background-color: map-get($mapa-claro, 'main' );
+    }
+    height:map-get($mapa-medidas, 'main');
+}
+
+
+$contador: 1;
+$imagenes:6;
+//Para construir elementos casi identicos utilizare cualquier estructura iterativa
+// Inicio del bucle while
+@while $contador <= $imagenes{
+  // Selector dinámico usando la variable de control. Interpolación
+  .element-#{$contador} {
+    width: 20px; // Establecer el ancho en función del contador
+    height: 20px; // Altura constante
+    background:map-get($mapa-degradados, $contador); //cogemos el valor del degradado segun el indice
+    margin: 5px; // Margen constante
+  }
+
+  // Actualización de la variable de control para evitar un bucle infinito
+  $contador: $contador + 1;
+}
+
+
