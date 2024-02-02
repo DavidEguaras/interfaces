@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Establece la altura del cuerpo al 100% de la ventana de visualización */
+    background-image: url('../images/deer.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* La imagen se ajusta al tamaño de la ventana de visualización manteniendo su relación de aspecto */
+    background-position: center; /* Centra la imagen en la ventana de visualización */
+	font-family: 'Segoe UI';
+    backdrop-filter: blur(0px);
+}
+

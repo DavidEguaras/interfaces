@@ -1,0 +1,32 @@
+.tabs {
+    backdrop-filter: blur(100px);
+    background-color:  rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+  
+.nav-tabs {
+    background-color: transparent;
+    border: none;
+}
+  
+.nav-link {
+    color: rgba(0, 0, 0, 0.7);
+}
+  
+.nav-link:hover, .nav-link.active {
+    backdrop-filter: blur(10px);
+    background-color:  rgba(255, 255, 255, .2); /* Adjust the hover and active background color */
+    border-radius: 10px;
+}
+  
+.tab-pane {
+    backdrop-filter: blur(10px);
+    background-color:  rgba(255, 255, 255, .2); /* Adjust the color and opacity */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
