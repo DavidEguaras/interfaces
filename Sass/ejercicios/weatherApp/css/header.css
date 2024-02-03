@@ -18,19 +18,6 @@
     margin-bottom: 0; /* Remove default margin */
 }
   
-.nav-link {
-    color: rgba(0, 0, 0, 0.7);
-    font-weight: bold;
-    margin: 0 15px;
-    transition: color 0.3s ease-in-out;
-}
-  
-.nav-link:hover{
-    color: white;
-}
-.nav-link.active {
-    color: white;
-}
 
 .login-btns {
    display: flex;
