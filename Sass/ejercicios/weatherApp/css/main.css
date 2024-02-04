@@ -1,15 +1,16 @@
 main{
     max-width: 1000px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .tabs {
     backdrop-filter: blur(100px);
-    background-color:  rgba(255, 255, 255, .2);
+    background-color:  rgba(255, 255, 255, .4);
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
+    width: 520px;
+    height: 750px;
 }
 .nav-tabs {
     background-color: transparent;
@@ -17,15 +18,13 @@ main{
 }
 .tab-pane {
     backdrop-filter: blur(10px);
-    background-color:  rgba(255, 255, 255, .2);
-    backdrop-filter: blur(10px);
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
-    padding: 20px;
-    margin-top: 10px;
+    padding: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
-
-
 .nav-link {
     color: rgba(0, 0, 0, 0.7);
     font-weight: bold;
@@ -44,4 +43,7 @@ main{
     background-color:  rgba(255, 255, 255, .2);
     border-radius: 10px;
 }
-  
+
+.accordion{
+    font-weight: normal;
+}
