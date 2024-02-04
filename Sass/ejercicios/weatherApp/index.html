@@ -18,31 +18,33 @@
     <div class="background-image"></div>
   </div>
 
-  
-  <header class="header mb-5">
+  <!-- ================HEADER================ -->
+  <header class="header mb-5 ">
 
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
+        
 
-        <div class=" col-lg-3 col-md-6 col-sm-12">
+        <!-- Logo -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
           <div class="">
             <h1>The weather in: </h1>
           </div>
         </div>
-
-        
-        <div class="login col-lg-3 col-md-12 col-sm-12 mt-2">
-          <div class="search-box">
-            <form action="">
-              <input type="text" placeholder="Enter your location">
+  
+        <!-- search-box -->
+        <div class="col-lg-6 col-md-6 col-sm-12 mb-1">
+          <div class="search-box d-flex">
+            <form action="" class="ubicationForm w-95 d-flex">
+              <input type="text" class="form-control flex-grow-1" placeholder="Enter your location">
               <button class="fa-solid fa-magnifying-glass"></button>
             </form>
           </div>
         </div>
 
 
+        <!-- Login and Register Links -->
         <div class="login col-lg-3 col-md-12 col-sm-12">
-          <!-- Login and Register Links -->
           <div class="d-flex justify-content-end">
             <a href="#" class="btn btn-outline-primary mr-2">Login</a>
             <a href="#" class="btn btn-outline-primary">Register</a>
@@ -53,28 +55,73 @@
     </div>
 
   </header>
+  <!--!================HEADER================ -->
 
+
+  
+  <!--================MAIN================ -->
   <main>
-    <div class="tabs container mt-5">
-      <ul class="nav nav-tabs" id="myTabs">
-        <li class="nav-item">
-          <a class="nav-link active" id="tab1" data-bs-toggle="tab" href="#content1">Today</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="tab2" data-bs-toggle="tab" href="#content2">Tomorrow</a>
-        </li>
-      </ul>
-    
-      <div class="tab-content mt-2">
-        <div class="tab-pane fade show active" id="content1">
-          <p>Content for Tab 1 goes here.</p>
-        </div>
-        <div class="tab-pane fade" id="content2">
-          <p>Content for Tab 2 goes here.</p>
-        </div>
+    <!-- tabs -->
+  <div class="tabs container">
+
+    <!-- tab selector -->
+    <ul class="nav nav-tabs" id="myTabs">
+      <li class="nav-item">
+        <a class="nav-link active" id="tab1" data-bs-toggle="tab" href="#content1">Today</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab2" data-bs-toggle="tab" href="#content2">Tomorrow</a>
+      </li>
+    </ul>
+
+    <!-- tabs content -->
+    <div class="tab-content mt-2">
+      <div class="tab-pane fade show active" id="content1">
+        <div class="search-box">
+          <i class="fa-solid fa-location-dot"></i>
+          <input type="text" placeholder="Enter your location">
+          <button class="fa-solid fa-magnifying-glass"></button>
+      </div>
+          <div class="not-found">
+              <img src="images/404.png">
+              <p>Oops! Invalid location :/</p>
+          </div>
+  
+          <div class="weather-box">
+              <img src="">
+              <p class="temperature"></p>
+              <p class="description"></p>
+          </div>
+  
+          <div class="weather-details">
+              <div class="humidity">
+                  <i class="fa-solid fa-water"></i>
+                  <div class="text">
+                      <span></span>
+                      <p>Humidity</p>
+                  </div>
+              </div>
+              <div class="wind">
+                  <i class="fa-solid fa-wind"></i>
+                  <div class="text">
+                      <span></span>
+                      <p>Wind Speed</p>
+                  </div>
+              </div>
+          </div>
+  
+      </div>
+      <div class="tab-pane fade" id="content2">
+        <p>Content for Tab 2 goes here.</p>
       </div>
     </div>
+
+  </div>
   </main>
+  
+  
+  <!--================MAIN================ -->
+
 
   <footer></footer>
 

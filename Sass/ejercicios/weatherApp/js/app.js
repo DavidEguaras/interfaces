@@ -1,3 +1,4 @@
+//javascript code source => https:github.com/AsmrProg-YT/100-days-of-javascript/blob/master/Day%20%2310%20-%20Weather%20App
 const container = document.querySelector('.container');
 const search = document.querySelector('.search-box button');
 const weatherBox = document.querySelector('.weather-box');
@@ -5,17 +6,20 @@ const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () => {
+    const APIKey = '03c70ca990ebb9388fff255ca3c0eadf';
+    const cityInput = document.querySelector('.search-box input');
+    const city = cityInput.value;
 
-    const APIKey = 'ee2bbd079479bff65502513ba54b90ee';
-    const city = document.querySelector('.search-box input').value;
-
-    if (city === '')
-        return;
+    if (city === '') return;
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(json => {
-
             if (json.cod === '404') {
                 container.style.height = '400px';
                 weatherBox.style.display = 'none';
@@ -26,7 +30,6 @@ search.addEventListener('click', () => {
             }
 
             error404.style.display = 'none';
-            error404.classList.remove('fadeIn');
 
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
@@ -38,23 +41,18 @@ search.addEventListener('click', () => {
                 case 'Clear':
                     image.src = 'images/clear.png';
                     break;
-
                 case 'Rain':
                     image.src = 'images/rain.png';
                     break;
-
                 case 'Snow':
                     image.src = 'images/snow.png';
                     break;
-
                 case 'Clouds':
                     image.src = 'images/cloud.png';
                     break;
-
                 case 'Haze':
                     image.src = 'images/mist.png';
                     break;
-
                 default:
                     image.src = '';
             }
@@ -69,9 +67,9 @@ search.addEventListener('click', () => {
             weatherBox.classList.add('fadeIn');
             weatherDetails.classList.add('fadeIn');
             container.style.height = '590px';
-
-
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            console.log('error');
         });
-
-
 });
