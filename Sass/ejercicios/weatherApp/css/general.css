@@ -13,7 +13,7 @@ body {
 
 @media only screen and (max-width: 600px) {
     body {
-        background-size: auto; /* Use contain instead of cover for smaller screens */
+        background-size: auto;
     }
 }
 

@@ -50,29 +50,5 @@
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px rgba(80, 170, 223, 0.9);
 }
-
 /*!-----search-box-----*/
 
-
-/*-----login div-----*/
-.btn-outline-primary {
-    margin-left: 10px;
-    color: white;
-    background-color: #007bff;
-}
-/*!-----login div-----*/
-
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .ubicationForm button {
-    width: auto; /* or any responsive width */
-  }
-    .nav-link {
-      margin: 5px 0;
-    }
-
-    .login-btns {
-      margin-top: 10px;
-    }
-}
