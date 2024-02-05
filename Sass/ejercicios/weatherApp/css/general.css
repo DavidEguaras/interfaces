@@ -16,3 +16,24 @@ body {
         background-size: auto; /* Use contain instead of cover for smaller screens */
     }
 }
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+  
+.nav-link:hover{
+    color: white;
+}
+.nav-link.active {
+    color: white;
+}
+.nav-link:hover, .nav-link.active {
+    backdrop-filter: blur(10px);
+    background-color:  rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: black;
+}
+

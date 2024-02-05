@@ -1,6 +1,5 @@
 main{
     max-width: 1000px;
-    margin: auto;
     margin-top: 80px;
 }
 .tabs {
@@ -10,8 +9,10 @@ main{
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     height: auto;
+    max-height: 750px;
     /* width: 420px; */ 
-    /*Para moviles*/
+
+    /*For smartphones*/
     width: auto;
 
 }
@@ -28,25 +29,11 @@ main{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 }
-.nav-link {
-    color: rgba(0, 0, 0, 0.7);
-    font-weight: bold;
-    margin: 0 15px;
-    transition: color 0.3s ease-in-out;
-}
-  
-.nav-link:hover{
-    color: white;
-}
-.nav-link.active {
-    color: white;
-}
-.nav-link:hover, .nav-link.active {
-    backdrop-filter: blur(10px);
-    background-color:  rgba(255, 255, 255, .2);
-    border-radius: 10px;
-}
+
 
 .accordion{
-    font-weight: normal;
+    font-weight: 500;
+}
+.humidity{
+    margin-left:-18% ;
 }

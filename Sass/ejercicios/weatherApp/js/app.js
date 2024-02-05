@@ -1,3 +1,5 @@
+// SOURCE CODE -> https://github.com/AsmrProg-YT/100-days-of-javascript/blob/master/Day%20%2310%20-%20Weather%20App/index.js
+//De aqui cogi la estructura general para cargar los datos de la api y la logica de las imagenes, asi como las imagenes en si
 class WeatherApp {
     constructor() {
         this.initElements();
@@ -10,6 +12,7 @@ class WeatherApp {
         this.weatherDetails = document.querySelector('.weather-details');
         this.error404 = document.querySelector('.not-found');
         this.placeholder = this.createPlaceholder();
+        this.accordion = document.querySelector('.accordion')
     }
 
     createPlaceholder() {
@@ -87,28 +90,12 @@ class WeatherApp {
         wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
         this.weatherDetails.classList.remove('d-none');
+        this.accordion.classList.remove('d-none');
         this.weatherBox.classList.add('mx-auto');
         this.weatherDetails.classList.add('mx-auto');
-
         this.placeholder.replaceWith(this.weatherBox);
         this.placeholder.replaceWith(this.weatherDetails);
     }
 }
 
 const weatherApp = new WeatherApp();
-
-
-//Background change with Sass
-document.addEventListener('DOMContentLoaded', function () {
-    const body = document.body;
-    const button = document.getElementById('changeBackgroundBtn');
-    const images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
-    let currentImageIndex = 0;
-
-    const changeBackground = () => {
-        body.style.backgroundImage = `url('${images[currentImageIndex]}')`;
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-    };
-
-    button.addEventListener('click', changeBackground);
-});
