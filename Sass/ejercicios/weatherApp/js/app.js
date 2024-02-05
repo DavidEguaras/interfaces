@@ -96,3 +96,19 @@ class WeatherApp {
 }
 
 const weatherApp = new WeatherApp();
+
+
+//Background change with Sass
+document.addEventListener('DOMContentLoaded', function () {
+    const body = document.body;
+    const button = document.getElementById('changeBackgroundBtn');
+    const images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
+    let currentImageIndex = 0;
+
+    const changeBackground = () => {
+        body.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    };
+
+    button.addEventListener('click', changeBackground);
+});

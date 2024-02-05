@@ -1,0 +1,48 @@
+$backgroundImages: ('image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg');
+$transitionDuration: 0.5s;
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image $transitionDuration ease-in-out;
+
+    // Set the default background image
+    background-image: url(nth($backgroundImages, 1));
+    background-size: cover;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@for $i from 1 through length($backgroundImages) {
+    body.bg-#{$i} {
+        background-image: url(nth($backgroundImages, $i));
+    }
+}
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const body = document.body;
+    const button = document.getElementById('changeBackgroundBtn');
+    const totalImages = 4;
+    let currentImageIndex = 1;
+
+    const changeBackground = () => {
+        // Toggle the background class based on the current index
+        body.className = `bg-${currentImageIndex}`;
+
+        // Increment the index for the next click
+        currentImageIndex = (currentImageIndex % totalImages) + 1;
+    };
+
+    button.addEventListener('click', changeBackground);
+});
