@@ -1,13 +1,18 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; /* Establece la altura del cuerpo al 100% de la ventana de visualización */
-    background-image: url('../images/deer.jpg'); /* Ruta de tu imagen */
-    background-size: cover; /* La imagen se ajusta al tamaño de la ventana de visualización manteniendo su relación de aspecto */
-    background-position: center; /* Centra la imagen en la ventana de visualización */
-	font-family: "League Spartan", sans-serif;
+    height: 100vh;
+    background-image: url('../images/deer.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: "League Spartan", sans-serif;
     font-weight: bold;
     font-size: 16px;
     backdrop-filter: blur(2px);
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: auto; /* Use contain instead of cover for smaller screens */
+    }
+}

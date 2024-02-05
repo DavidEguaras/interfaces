@@ -9,8 +9,11 @@ main{
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 520px;
-    height: 750px;
+    height: auto;
+    /* width: 420px; */ 
+    /*Para moviles*/
+    width: auto;
+
 }
 .nav-tabs {
     background-color: transparent;
